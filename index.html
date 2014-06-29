@@ -30,6 +30,16 @@
       background-color: white;
       border-color: #080808;
     }
+
+.page-section {
+  width: 100%;
+  min-height: 800px;
+  padding: 50px 0;
+  border-bottom: 10px solid #fff;
+}
+    .page-section#aboutus {
+  background: url(images/bio.jpg) bottom center no-repeat;
+}
 </style>
   </head>
 <!-- NAVBAR
@@ -52,8 +62,8 @@
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="scroll-link" data-id="aboutus">About</a></li>
+                <li><a href="#" class="scroll-link" data-id="contactus">Contact</a></li>
                 <!--li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                   <ul class="dropdown-menu">
@@ -138,19 +148,19 @@
           <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
           <h2>Why Shanti Juniors</h2>
           <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p><a href="#" class="scroll-link" data-id="aboutus">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
           <h2>Curriculum</h2>
           <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p><a href="#" class="scroll-link" data-id="curriculum">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
           <h2>Methodology</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p><a href="#" class="scroll-link" data-id="methodology">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
@@ -159,7 +169,8 @@
 
       <hr class="featurette-divider">
 
-      <div class="row featurette">
+      <div id="aboutus" class="page-section">
+
         <div class="col-md-7">
           <h2 class="featurette-heading">Why <span class="text-muted">Shanti Juniors?</span></h2>
           <blockquote><p class="lead">At Shanti Juniros Your Child Just Doesn't Learn Here, But Loves to Learn. Forever. 
@@ -169,11 +180,12 @@ Shanti Juniors Pre-School Chain believes in balancing Fun & Learn from the very 
         <div class="col-md-5">
           <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
         </div>
+        <a href="#" class="scroll-top back-to-top"><bold>↑</bold></a>
       </div>
 
       <hr class="featurette-divider">
 
-      <div class="row featurette">
+      <div id="curriculum" class="row featurette">
         <div class="col-md-5">
           <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
         </div>
@@ -183,11 +195,12 @@ Shanti Juniors Pre-School Chain believes in balancing Fun & Learn from the very 
 
 
         </div>
+        <a href="#" class="scroll-top back-to-top"><bold>↑</bold></a>
       </div>
 
       <hr class="featurette-divider">
 
-      <div class="row featurette">
+      <div id="methodology" class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">What is the <span class="text-muted">Methodology.</span></h2>
            <blockquote><p class="lead">After intense research, it was found that I3 Learning Ladder inspires the 4Cs in a child, The 3 Is :</p>
@@ -233,6 +246,7 @@ Shanti Juniors Pre-School Chain believes in balancing Fun & Learn from the very 
   </a>
 </div>
 </blockquote>
+<a href="#" class="scroll-top back-to-top"><bold>↑</bold></a>
         </div>
         <div class="col-md-5">
          <img  class="featurette-image img-responsive" src="./images/method.jpg">
@@ -262,5 +276,41 @@ Shanti Juniors Pre-School Chain believes in balancing Fun & Learn from the very 
     <script src="./javascripts/bootstrap.min.js"></script>
     <script src="./javascripts/docs.min.js"></script>
     <script src="./javascripts/app.js"></script>
+    <script type="text/javascript">
+$(document).ready(function() {
+  // navigation click actions
+  $('.scroll-link').on('click', function(event){
+    event.preventDefault();
+    var sectionID = $(this).attr("data-id");
+    scrollToID('#' + sectionID, 750);
+  });
+  // scroll to top action
+  $('.scroll-top').on('click', function(event) {
+    event.preventDefault();
+    $('html, body').animate({scrollTop:0}, 'slow');
+  });
+  // mobile nav toggle
+  $('#nav-toggle').on('click', function (event) {
+    event.preventDefault();
+    $('#main-nav').toggleClass("open");
+  });
+});
+// scroll function
+function scrollToID(id, speed){
+  var offSet = 50;
+  var targetOffset = $(id).offset().top - offSet;
+  var mainNav = $('#main-nav');
+  $('html,body').animate({scrollTop:targetOffset}, speed);
+  if (mainNav.hasClass("open")) {
+    mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+    mainNav.removeClass("open");
+  }
+}
+if (typeof console === "undefined") {
+    console = {
+        log: function() { }
+    };
+}
+</script>
   </body>
 </html>
