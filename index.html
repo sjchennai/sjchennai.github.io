@@ -44,8 +44,9 @@
 body{
 	background-color: #FFF212;
 }
-
-
+.panel-primary>.panel-heading {
+background-color: rgb(137, 209, 29);
+}
 #map-outer {height: 440px; padding: 20px; border: 2px solid #CCC; margin-bottom: 20px; background-color:#FFF }
 	  #map-canvas { height: 400px }
 	  @media all and (max-width: 768px) {
@@ -56,95 +57,321 @@ body{
 <!-- NAVBAR
 ================================================== -->
   <body>
-
+	<script type="text/x-handlebars">
     <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Our Center</a></li>
-          <li><a href="#">Curriculum</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-        <a href="#" class="btn btn-link navbar-btn"><img  class="img-responsive" src="./images/logo.png"></a>
-      </div>
 
-	<div class="row">
-		<div id="map-outer" class="col-md-12">
-				<div id="address" class="col-md-4">
-				<h2>Our Location</h2>
-				<address>
-				<!--strong class="lead">Shanthi Juniors</strong><br-->
-				<p class="lead">
-					10/4, Chidambaranar street<br>
-					Alwarthirunagar<br>
-					Chennai<br>
-					India 600087<br>
-					<abbr>P:</abbr> +91-9445006651 , +91-9444187515<br>
-					<abbr>Email:</abbr> <a href="mailto:alwarthirunagar@shantijuniors.com">alwarthirunagar@shantijuniors.com</a>
-				</p>
-				</address>
-				</div>
-				<div id="map-canvas" class="col-md-8"></div>
-		</div><!-- /map-outer -->
-	</div>
-	<div class="row">
-      <div class="footer">
-		        <p class="pull-right"><a href="#">Back to top</a></p>
-		      <p>&copy; 2014 Shanti Juniors - Alwarthiru Nagar,Chennai &middot; <a href="mailto:alwarthirunagar@shantijuniors.com">alwarthirunagar@shantijuniors.com</a> , +91-9445006651 , +91-9444187515</p>
-		      <img src="./images/footer.png"/>
+		<div class="header">
+			<ul class="nav nav-pills pull-right">
+			  <li class="active"><a href="#">Home</a></li>
+			  <li>{{#linkTo 'aboutus'}}About Us{{/linkTo}}</li>
+			  <li>{{#linkTo 'team'}}Team{{/linkTo}}</li>
+			  <li>{{#linkTo 'programs'}}Programs{{/linkTo}}</li>
+			  <li>{{#linkTo 'contactus'}}Contact Us{{/linkTo}}</li>
+			</ul>
+			<a href="#" class="btn btn-link navbar-btn"><img  class="img-responsive" src="./images/logo.png"></a>
+		</div>
 
-      </div>
-	</div>
+
+			<div class="row">
+				{{outlet}}
+			</div>
+
+
+
+		<div class="row">
+		  <div class="footer">
+					<p class="pull-right"><a href="#">Back to top</a></p>
+				  <p>&copy; 2014 Shanti Juniors - Alwarthiru Nagar,Chennai &middot; <a href="mailto:alwarthirunagar@shantijuniors.com">alwarthirunagar@shantijuniors.com</a> , +91-9445006651 , +91-9444187515</p>
+				  <img src="./images/footer.png"/>
+
+		  </div>
+		</div> <!-- End of footer row-->
+
     </div> <!-- /container -->
+	</script>
 
-<!-- /.container -->
+
+	<script type="text/x-handlebars" data-template-name="index">
+			<div class="col-md-12">
+					<div id="address" class="col-md-8">
+
+<div id="directors" class="panel panel-primary">
+	<div class="panel-heading"><h3 class="panel-title"><strong>Message from our directors!</strong></h3></div>
+	<div class="panel-body">
+		<ul class="list-group list-group-flush">
+
+					<li class="list-group-item">
+											<p>
+																					Study after study shows quality preschool is an educational springboard that prepares children to learn and succeed in education, careers, and life. Neuroscientists have found that early experiences, particularly from birth to age five, shape a child's brain and development and can have long-lasting effects, ultimately preparing children for a brighter future.
+																				</p>
+																				<p>
+																					"Shanti Juniors" is a well known chain of play school addressing the educational needs of early childhood years by following developmentally appropriate practices. We celebrate childhood through the unique blend of international approaches amalgamated with Indian culture. We provide age appropriate early childhood care and education programs integrated with technology in a joyful environment to lay a strong foundation for our happy and righteous children to be responsible citizens of the world.
+																				</p>
+																				<p>
+																					At our Alwarthirunagar center, we are committed to bringing the highest quality of early childhood education and care for your children and your family. We started this preschool with a mission to provide un-compromised education and care to every single child in the center. Our utmost priority is to provide a safe, healthy, comfortable and friendly environment for every child. We believe that only when a child feels comfortable and happy, he/she starts learning at an unimaginable pace. We carefully handpick qualified, caring and dedicated staff to ensure that every single child is given individual attention.
+																				</p>
+																				<p>
+																					We assure you that you will never regret for your decision to enrol your child here at our center. We are happy to clarify any of your questions, hence free to contact us.
+																				</p>
+																				<p>
+																					<strong>G.Murugesan and V.Shreedharan <br>
+																					Retired Engineers of Hindustan Teleprinters Ltd (Govt of India).
+																				</strong>
+									</p>
+					</li>
 
 
+		</ul>
+	</div>
+</div>
+
+
+					</div>
+					<!-- Display Images -->
+					<div class="col-md-4">
+						<img id="ima" src="./images/1.jpg">
+					</div>
+			</div><!-- /map-outer -->
+	</script>
+
+	<div class="row">
+	</div>
+
+	<script type="text/x-handlebars" data-template-name="contactus">
+			<div id="map-outer" class="col-md-12">
+					<div id="address" class="col-md-4">
+						<h2>Our Location</h2>
+						<address>
+						<!--strong class="lead">Shanthi Juniors</strong><br-->
+						<p class="lead">
+							10/4, Chidambaranar street<br>
+							Alwarthirunagar<br>
+							Chennai<br>
+							India 600087<br>
+							<abbr>P:</abbr> +91-9445006651 , +91-9444187515<br>
+							<abbr>Email:</abbr> <a href="mailto:alwarthirunagar@shantijuniors.com">alwarthirunagar@shantijuniors.com</a>
+						</p>
+						</address>
+					</div>
+
+					<div id="map-canvas" class="col-md-8"></div>
+			</div><!-- /map-outer -->
+	</script>
+
+
+<script type="text/x-handlebars" data-template-name="aboutus">
+			<div class="col-md-12">
+					<div id="address" class="col-md-8">
+
+
+					<div id="directors" class="panel panel-primary">
+						<div class="panel-heading"><h3 class="panel-title"><strong>Shanti Juniors</strong></h3></div>
+						<div class="panel-body">
+							<ul class="list-group list-group-flush">
+
+										<li class="list-group-item">
+																<p>
+																										"Shanti Juniors" is a well known chain of play school addressing the educational needs of early childhood years by following developmentally appropriate practices. We celebrate childhood through the unique blend of international approaches amalgamated with Indian culture. We provide age appropriate early childhood care and education programs integrated with technology in a joyful environment to lay a strong foundation for our happy and righteous children to be responsible citizens of the world.
+																									</p>
+																									<br>
+										</li>
+
+							</ul>
+						</div>
+				</div>
+
+					<div id="directors" class="panel panel-primary">
+						<div class="panel-heading"><h3 class="panel-title"><strong>Our Center</strong></h3></div>
+						<div class="panel-body">
+							<ul class="list-group list-group-flush">
+
+										<li class="list-group-item">
+																<p>
+																									<p>
+																									Our Alwarthirunagar center, is located in a quiet and less polluted residential neighbourhood. Our beautiful, comfortable environment is safe, nurturing, and specifically designed to optimize the development of young hearts and minds. We focus on developing the child's academic, physical, social and language skills that will enable them to be successful in the future.
+																									</p>
+																									<p>
+																									We respect the unique set of talents and challenges for each child. Our teachers and caretakers are trained to help each child play, learn and explore new skills and activities. They recognize each success, challenge, and effort, and reflect these back to the children. In such a personally supportive environment, children feel secure and optimistic. They seek out new challenges and learn how to solve problems.
+																									</p>
+																									<p>
+																									Our aim is to provide un-compromised education and care to every single child in the center. Our utmost priority is to provide a safe, healthy, comfortable and friendly environment for every child. We believe that only when a child feels comfortable and happy, he/she starts learning at an unimaginable pace.
+									</p>
+										</li>
+
+							</ul>
+						</div>
+				</div>
+
+
+					</div>
+					<!-- Display Images -->
+					<div class="col-md-4">
+						<img id="ima" src="./images/1.jpg">
+					</div>
+			</div><!-- /map-outer -->
+	</script>
+
+
+	<script type="text/x-handlebars" data-template-name="team">
+				<div class="col-md-12">
+						<div id="address" class="col-md-8">
+
+
+<div id="directors" class="panel panel-primary">
+	<div class="panel-heading"><h3 class="panel-title"><strong>Directors</strong></h3></div>
+	<div class="panel-body">
+		<ul class="list-group list-group-flush">
+
+					<li class="list-group-item">
+											<h4 class="list-group-item-heading">G.Murugesan</h4>
+												TBD
+					</li>
+					<li class="list-group-item">
+											<h4 class="list-group-item-heading">V.Shreedharan</h4>
+												TBD
+					</li>
+
+		</ul>
+	</div>
+</div>
+
+<div id="directors" class="panel panel-primary">
+	<div class="panel-heading"><h3 class="panel-title"><strong>Teachers</strong></h3></div>
+	<div class="panel-body">
+		<ul class="list-group list-group-flush">
+
+					<li class="list-group-item">
+											<h4 class="list-group-item-heading">G.Murugesan</h4>
+												TBD
+					</li>
+					<li class="list-group-item">
+											<h4 class="list-group-item-heading">V.Shreedharan</h4>
+												TBD
+					</li>
+
+		</ul>
+	</div>
+</div>
+
+<div id="directors" class="panel panel-primary">
+	<div class="panel-heading"><h3 class="panel-title"><strong>Care Takers</strong></h3></div>
+	<div class="panel-body">
+		<ul class="list-group list-group-flush">
+
+					<li class="list-group-item">
+											<h4 class="list-group-item-heading">G.Murugesan</h4>
+												TBD
+					</li>
+					<li class="list-group-item">
+											<h4 class="list-group-item-heading">V.Shreedharan</h4>
+												TBD
+					</li>
+
+		</ul>
+	</div>
+</div>
+
+						</div>
+						<!-- Display Images -->
+						<div class="col-md-4">
+							<img id="ima" src="./images/1.jpg">
+						</div>
+				</div><!-- /map-outer -->
+	</script>
+
+<script type="text/x-handlebars" data-template-name="programs">
+				<div class="col-md-12">
+						<div id="address" class="col-md-8">
+
+<div id="directors" class="panel panel-primary">
+	<div class="panel-heading"><h3 class="panel-title"><strong>6 months - 1.5 yrs</strong></h3></div>
+	<div class="panel-body">
+		<ul class="list-group list-group-flush">
+
+					<li class="list-group-item">
+											<h4 class="list-group-item-heading">G.Murugesan</h4>
+												TBD
+					</li>
+					<li class="list-group-item">
+											<h4 class="list-group-item-heading">V.Shreedharan</h4>
+												TBD
+					</li>
+
+		</ul>
+	</div>
+</div>
+
+<div id="directors" class="panel panel-primary">
+	<div class="panel-heading"><h3 class="panel-title"><strong>1.5 yrs - 3 yrs</strong></h3></div>
+	<div class="panel-body">
+		<ul class="list-group list-group-flush">
+
+					<li class="list-group-item">
+											<h4 class="list-group-item-heading">G.Murugesan</h4>
+												TBD
+					</li>
+					<li class="list-group-item">
+											<h4 class="list-group-item-heading">V.Shreedharan</h4>
+												TBD
+					</li>
+
+		</ul>
+	</div>
+</div>
+
+<div id="directors" class="panel panel-primary">
+	<div class="panel-heading"><h3 class="panel-title"><strong>3 yrs and above</strong></h3></div>
+	<div class="panel-body">
+		<ul class="list-group list-group-flush">
+
+					<li class="list-group-item">
+											<h4 class="list-group-item-heading">G.Murugesan</h4>
+												TBD
+					</li>
+					<li class="list-group-item">
+											<h4 class="list-group-item-heading">V.Shreedharan</h4>
+												TBD
+					</li>
+
+		</ul>
+	</div>
+</div>
+
+						</div>
+						<!-- Display Images -->
+						<div class="col-md-4">
+							<img id="ima" src="./images/1.jpg">
+						</div>
+				</div><!-- /map-outer -->
+	</script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-1.0.0.js"></script>
+    <script src="./javascripts/ember.prod.js"></script>
     <script src="./javascripts/bootstrap.min.js"></script>
     <script src="./javascripts/docs.min.js"></script>
     <script type='text/javascript' src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
     <script src="./javascripts/app.js"></script>
-    <script type="text/javascript">
-$(document).ready(function() {
-  // navigation click actions
-  $('.scroll-link').on('click', function(event){
-    event.preventDefault();
-    var sectionID = $(this).attr("data-id");
-    scrollToID('#' + sectionID, 750);
-  });
-  // scroll to top action
-  $('.scroll-top').on('click', function(event) {
-    event.preventDefault();
-    $('html, body').animate({scrollTop:0}, 'slow');
-  });
-  // mobile nav toggle
-  $('#nav-toggle').on('click', function (event) {
-    event.preventDefault();
-    $('#main-nav').toggleClass("open");
-  });
-});
-// scroll function
-function scrollToID(id, speed){
-  var offSet = 50;
-  var targetOffset = $(id).offset().top - offSet;
-  var mainNav = $('#main-nav');
-  $('html,body').animate({scrollTop:targetOffset}, speed);
-  if (mainNav.hasClass("open")) {
-    mainNav.css("height", "1px").removeClass("in").addClass("collapse");
-    mainNav.removeClass("open");
-  }
-}
-if (typeof console === "undefined") {
-    console = {
-        log: function() { }
-    };
-}
-</script>
+           <script language="JavaScript" type="text/JavaScript">
+	                var im= new Array()//set your pictures here as an array
+	                im[0] = './images/1.jpg';
+	                im[1] = './images/2.jpg';
+	                im[2] = './images/3.jpg';
+	                im[3] = './images/4.jpg';
+	                im[4] = './images/5.jpg';
+	                im[5] = './images/6.jpg';
+	                var time = 2000; // set delay in miliseconds
+	                var q=1;
+	                function slideI(){
+	                document.getElementById('ima').setAttribute('src',im[q]);
+	                q++;
+	                if(q==im.length){q=0}
+	                setTimeout('slideI()',time);
+	                }
+	                onload=function(){setTimeout('slideI()',time)}
+	        </script>
+
   </body>
 </html>

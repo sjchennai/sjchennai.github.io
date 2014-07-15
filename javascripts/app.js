@@ -1,6 +1,24 @@
+App = Ember.Application.create({
+  // Basic logging, e.g. "Transitioned into 'post'"
+  LOG_TRANSITIONS: true,
+
+  // Extremely detailed logging, highlighting every internal
+  // step made while transitioning into a route, including
+  // `beforeModel`, `model`, and `afterModel` hooks, and
+  // information about redirects and aborted transitions
+  LOG_TRANSITIONS_INTERNAL: true
+});
+
+App.Router.map(function() {
+  this.route("index", {path: "/"});
+  this.route("contactus", {path: "/contactus"});
+  this.route("aboutus", {path: "/aboutus"});
+  this.route("team", {path: "/team"});
+  this.route("programs", {path: "/programs"});
+});
+
 /* google maps -----------------------------------------------------*/
 google.maps.event.addDomListener(window, 'load', initialize);
-
 function initialize() {
 
   /* position Amsterdam */
@@ -22,4 +40,3 @@ function initialize() {
   marker.setMap(map);
 
 };
-/* end google maps -----------------------------------------------------*/
