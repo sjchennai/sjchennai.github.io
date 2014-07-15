@@ -37,254 +37,69 @@
   padding: 50px 0;
   border-bottom: 10px solid #fff;
 }
-    .page-section#aboutus {
+  .page-section#aboutus {
   background: url(images/bio.jpg) bottom center no-repeat;
 }
+
+body{
+	background-color: #FFF212;
+}
+
+
+#map-outer {height: 440px; padding: 20px; border: 2px solid #CCC; margin-bottom: 20px; background-color:#FFF }
+	  #map-canvas { height: 400px }
+	  @media all and (max-width: 768px) {
+		#map-outer  { height: 650px }
+		}
 </style>
   </head>
 <!-- NAVBAR
 ================================================== -->
   <body>
-    <div class="navbar-wrapper">
-      <div class="container">
 
-        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-                <a href="#" class="btn btn-link navbar-btn"><img  class="img-responsive" src="./images/shanti-juniors-logo.png"></a>
-            </div>
-            <div class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <!--li class="active"><a href="#">Home</a></li-->
-                <!--li><a href="#" class="scroll-link" data-id="aboutus">About</a></li-->
-                <!--li><a href="#" class="scroll-link" data-id="contactus">Contact</a></li-->
-                <!--li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
-                  </ul>
-                </li-->
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-
-    <!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <!--li data-target="#myCarousel" data-slide-to="2"></li-->
-      </ol>
-      <div class="carousel-inner">
-        <div class="item active">
-          
-          <!--img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide"-->
-          <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">
-
-          <div class="container">
-            <div class="carousel-caption">
-              
-              <h1>Welcome to Shanti Juniors - Alwarthiru Nagar,Chennai.</h1>
-              <h4>10/4, Chidambaranar street, Alwarthirunagar, Chennai, India 600087</h2>
-              <h4>Email: <a href="mailto:alwarthirunagar@shantijuniors.com">alwarthirunagar@shantijuniors.com</a></h2>
-              <h4>+91-9445006651 , +91-9444187515</h2>
-              <p>
-              <!--a class="btn btn-lg btn-primary" href="#" role="button">Contact today</a-->
-              <a href="#" class="btn btn-link navbar-btn"><img  class="img-responsive" src="./images/admission-open.jpg"></a>
-
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <!--img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide"-->
-
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Location Map</h1>
-              <img src="./images/map.png"/>
-              <!--p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p-->
-              <p></p>
-              <p><a class="btn btn-lg btn-primary" href="https://www.google.com/maps/place/10,+Chidambaranar+St,+Ramakrishna+Nagar,+Valasaravakkam/@13.0476346,80.1833265,17z/data=!3m1!4b1!4m2!3m1!1s0x3a526133b58c8107:0x12748e091c93c51d" role="button">View Us on Google Map</a></p>
-            </div>
-          </div>
-        </div>
-        
-        <!--div class="item">
-          <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-            </div>
-          </div>
-        </div-->
-
-      </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-    </div><!-- /.carousel -->
-
-
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <div class="container marketing">
-
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4">
-          <!--img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image"-->
-          <img  class="img-circle" src="./images/why.png">
-          <h2>Why Shanti Juniors</h2>
-          <p>At Shanti Juniros Your Child Just Doesn't Learn Here, But Loves to Learn...</p>
-          <p><a href="#" class="scroll-link" data-id="aboutus">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <!--img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image"-->
-          <img  class="img-circle" src="./images/curriculum.png">
-          <h2>Curriculum</h2>
-          <p>At SJ, The Curriculum comprises of a balanced blend of the renowned curriculum...</p>
-          <p><a href="#" class="scroll-link" data-id="curriculum">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <!--img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image"-->
-          <img  class="img-circle" src="./images/methodology.png">
-          <h2>Methodology</h2>
-          <p>After intense research, it was found that I3 Learning Ladder inspires the 4Cs in a child...</p>
-          <p><a href="#" class="scroll-link" data-id="methodology">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-
-
-      <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
-
-      <div id="aboutus" class="page-section">
-
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Why <span class="text-muted">Shanti Juniors?</span></h2>
-          <blockquote><p class="lead">At Shanti Juniros Your Child Just Doesn't Learn Here, But Loves to Learn. Forever. 
-Shanti Juniors Pre-School Chain believes in balancing Fun & Learn from the very first stage of early education through our programs of Playgroup, Nursery, Jr.Kg & Sr.Kg. SJ provides age appropriate early childhood care and education programs integrated with technology in a joyful environment to lay a strong foundation for our happy & righteous children to be responsible citizens of the world. Footer. 
-</p></blockquote>
-        </div>
-        <div class="col-md-5">
-          <img  class="img-responsive" src="./images/whyus_500.jpg">
-          <!--img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image"-->
-        </div>
-        <a href="#" class="scroll-top back-to-top"><bold>↑</bold></a>
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Our Center</a></li>
+          <li><a href="#">Curriculum</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <a href="#" class="btn btn-link navbar-btn"><img  class="img-responsive" src="./images/logo.png"></a>
       </div>
 
-      <hr class="featurette-divider">
+	<div class="row">
+		<div id="map-outer" class="col-md-12">
+				<div id="address" class="col-md-4">
+				<h2>Our Location</h2>
+				<address>
+				<!--strong class="lead">Shanthi Juniors</strong><br-->
+				<p class="lead">
+					10/4, Chidambaranar street<br>
+					Alwarthirunagar<br>
+					Chennai<br>
+					India 600087<br>
+					<abbr>P:</abbr> +91-9445006651 , +91-9444187515<br>
+					<abbr>Email:</abbr> <a href="mailto:alwarthirunagar@shantijuniors.com">alwarthirunagar@shantijuniors.com</a>
+				</p>
+				</address>
+				</div>
+				<div id="map-canvas" class="col-md-8"></div>
+		</div><!-- /map-outer -->
+	</div>
+	<div class="row">
+      <div class="footer">
+		        <p class="pull-right"><a href="#">Back to top</a></p>
+		      <p>&copy; 2014 Shanti Juniors - Alwarthiru Nagar,Chennai &middot; <a href="mailto:alwarthirunagar@shantijuniors.com">alwarthirunagar@shantijuniors.com</a> , +91-9445006651 , +91-9444187515</p>
+		      <img src="./images/footer.png"/>
 
-      <div id="curriculum" class="row featurette">
-        <div class="col-md-5">
-          <img  class="img-responsive" src="./images/curriculum_500.jpg">
-          <!--img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image"-->
-        </div>
-        <div class="col-md-7">
-          <h2 class="featurette-heading">What is the <span class="text-muted">Curriculum.</span></h2>
-           <blockquote><p class="lead">At SJ, The Curriculum comprises of a balanced blend of the renowned Montessori Method, Waldorf Approach, High Scope Approach, Bank Street Approach, and Reggio Emilia Approach and not to forget Phonetics as well as Quality Circle Time from experts in the field of Preschool education. Our curriculum has been designed exclusively for an all-round development of the child, taking in to account their cognitive, physical, social, emotional and sensorial abilities.</p></blockquote>
-
-
-        </div>
-        <a href="#" class="scroll-top back-to-top"><bold>↑</bold></a>
       </div>
+	</div>
+    </div> <!-- /container -->
 
-      <hr class="featurette-divider">
-
-      <div id="methodology" class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">What is the <span class="text-muted">Methodology.</span></h2>
-           <blockquote><p class="lead">After intense research, it was found that I3 Learning Ladder inspires the 4Cs in a child, The 3 Is :</p>
-
-<div class="list-group">
-  <a href="#" class="list-group-item active">
-    <h4 class="list-group-item-heading">Inquiry</h4>
-    <p class="list-group-item-text">It describes child’s thirst for knowledge and information. Children inquest and investigate everything they see in their surroundings. This highlights their basic characteristic of being ‘Curious’.</p>
-  </a>
-    <a href="#" class="list-group-item">
-    <h4 class="list-group-item-heading">Interaction</h4>
-    <p class="list-group-item-text">Continuing with the spirit of inquisitiveness, interactions are arranged for students with peers, teachers,experts, toys, tools or technology. This leads to unwinding their curiosity. Then they practically understand the interconnections and interdependence of the concepts.</p>
-  </a>
-  </a>
-    <a href="#" class="list-group-item">
-    <h4 class="list-group-item-heading">Innovation</h4>
-    <p class="list-group-item-text">It is an expression of creativity. Innovation is boundless as it is not limited to measurability and each creative expression is a new benchmark on the child’s developmental continuum. </p>
-  </a>
-  
-</div>
-
-
-<p class="lead">The 4 Cs is: </p>
-
-<div class="list-group">
-  <a href="#" class="list-group-item active">
-    <h4 class="list-group-item-heading">Curiosity</h4>
-    <p class="list-group-item-text">It is the trigger to search for information and seek knowledge to facilitate ones development. Little ones are curious to know about every aspect of various objects and things in their surrounding. A stimulating environment works wonders for children to foster development by stimulating and nurturing their curiosity to learn more.</p>
-  </a>
-    <a href="#" class="list-group-item">
-    <h4 class="list-group-item-heading">Confidence</h4>
-    <p class="list-group-item-text">Confidence sprouts from power of knowledge and information gained out of Interaction. Confident individuals have poise and believe in their potentials to make a difference. Confidence is an attribute that provides scope for creative thinking and innovations.</p>
-  </a>
-  </a>
-    <a href="#" class="list-group-item">
-    <h4 class="list-group-item-heading">Creativity</h4>
-    <p class="list-group-item-text">Creativity is an abstract attribute that is rooted into Confidence. Confidence is half battle won towards a goal and the rest is remarkably achieved with appropriate environment and stimulation for its expressions.</p>
-  </a>
-  </a>
-    <a href="#" class="list-group-item">
-    <h4 class="list-group-item-heading">Continuity</h4>
-    <p class="list-group-item-text">Continuity signifies perseverance & patience to satisfy curiosity, foster confidence & develop creativity. Learning and development are dynamic processes. Continuity of innovation through creativity is therefore the peak of – I3 Learning Ladder which foster 4 Cs; Curiosity, Confidence, Creativity & Continuity.</p>
-  </a>
-</div>
-</blockquote>
-<a href="#" class="scroll-top back-to-top"><bold>↑</bold></a>
-        </div>
-        <div class="col-md-5">
-         <img  class="img-responsive" src="./images/methodology_500.jpg">
-
-          <!--img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image"-->
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <!-- /END THE FEATURETTES -->
-
-
-      <!-- FOOTER -->
-      <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-      <p>&copy; 2014 Shanti Juniors - Alwarthiru Nagar,Chennai &middot; <a href="mailto:alwarthirunagar@shantijuniors.com">alwarthirunagar@shantijuniors.com</a> , +91-9445006651 , +91-9444187515</p>
-      <img src="./images/footer.png"/>
-        
-      </footer>
-
-    </div><!-- /.container -->
+<!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
@@ -293,6 +108,7 @@ Shanti Juniors Pre-School Chain believes in balancing Fun & Learn from the very 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="./javascripts/bootstrap.min.js"></script>
     <script src="./javascripts/docs.min.js"></script>
+    <script type='text/javascript' src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
     <script src="./javascripts/app.js"></script>
     <script type="text/javascript">
 $(document).ready(function() {
