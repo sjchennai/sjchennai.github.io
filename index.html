@@ -139,22 +139,41 @@ background-color: rgb(137, 209, 29);
 
 	<script type="text/x-handlebars" data-template-name="contactus">
 			<div id="map-outer" class="col-md-12">
+
 					<div id="address" class="col-md-4">
-						<h2>Our Location</h2>
-						<address>
-						<!--strong class="lead">Shanthi Juniors</strong><br-->
-						<p class="lead">
-							10/4, Chidambaranar street<br>
-							Alwarthirunagar<br>
-							Chennai<br>
-							India 600087<br>
-							<abbr>P:</abbr> +91-9445006651 , +91-9444187515<br>
-							<abbr>Email:</abbr> <a href="mailto:alwarthirunagar@shantijuniors.com">alwarthirunagar@shantijuniors.com</a>
-						</p>
+
+					<div id="directors" class="panel panel-primary">
+						<div class="panel-heading"><h3 class="panel-title"><strong>Our Location</strong></h3></div>
+						<div class="panel-body">
+							<ul class="list-group list-group-flush">
+
+										<li class="list-group-item">
+																<address>
+																						<!--strong class="lead">Shanthi Juniors</strong><br-->
+																						<p>
+																							10/4, Chidambaranar street<br>
+																							Alwarthirunagar<br>
+																							Chennai<br>
+																							India 600087<br>
+																							<abbr>P:</abbr> +91-9445006651 , +91-9444187515<br>
+																							<abbr>Email:</abbr> <a href="mailto:alwarthirunagar@shantijuniors.com">alwarthirunagar@shantijuniors.com</a>
+																						</p>
 						</address>
+										</li>
+
+
+							</ul>
+						</div>
 					</div>
 
-					<div id="map-canvas" class="col-md-8"></div>
+					</div>
+
+
+
+
+					{{#view App.MapView contentBinding="this"}}
+					      <div id="map-canvas" class="col-md-8"></div>
+      				{{/view}}
 			</div><!-- /map-outer -->
 	</script>
 

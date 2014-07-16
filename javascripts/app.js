@@ -17,6 +17,35 @@ App.Router.map(function() {
   this.route("programs", {path: "/programs"});
 });
 
+App.MapView = Ember.ContainerView.extend({
+  id: 'map-canvas',
+  tagName: 'div',
+
+  attributeBindings: ['style'],
+  style:"height: 300px; ",
+
+  map:null,
+
+  didInsertElement: function() {
+	var latlng = new google.maps.LatLng(13.0476346, 80.1833265);
+    var mapOptions = {
+      center: latlng,
+      zoom: 13,
+      scrollWheel: false
+    };
+
+    var marker = new google.maps.Marker({
+	    position: latlng,
+	    url: '/',
+	    animation: google.maps.Animation.DROP
+  });
+
+    var map = new google.maps.Map(this.$().get(0),mapOptions);
+    //this.set("map",map);
+    marker.setMap(map);
+  }
+});
+
 /* google maps -----------------------------------------------------*/
 google.maps.event.addDomListener(window, 'load', initialize);
 function initialize() {
