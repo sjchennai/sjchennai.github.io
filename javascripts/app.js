@@ -1,53 +1,6 @@
-App = Ember.Application.create({
-  // Basic logging, e.g. "Transitioned into 'post'"
-  LOG_TRANSITIONS: true,
-
-  // Extremely detailed logging, highlighting every internal
-  // step made while transitioning into a route, including
-  // `beforeModel`, `model`, and `afterModel` hooks, and
-  // information about redirects and aborted transitions
-  LOG_TRANSITIONS_INTERNAL: true
-});
-
-App.Router.map(function() {
-  this.route("index", {path: "/"});
-  this.route("contactus", {path: "/contactus"});
-  this.route("aboutus", {path: "/aboutus"});
-  this.route("team", {path: "/team"});
-  this.route("programs", {path: "/programs"});
-});
-
-App.MapView = Ember.ContainerView.extend({
-  id: 'map-canvas',
-  tagName: 'div',
-
-  attributeBindings: ['style'],
-  style:"height: 300px; ",
-
-  map:null,
-
-  didInsertElement: function() {
-	var latlng = new google.maps.LatLng(13.0476346, 80.1833265);
-    var mapOptions = {
-      center: latlng,
-      zoom: 13,
-      scrollWheel: false
-    };
-
-    var marker = new google.maps.Marker({
-	    position: latlng,
-	    url: '/',
-	    animation: google.maps.Animation.DROP
-  });
-
-    var map = new google.maps.Map(this.$().get(0),mapOptions);
-    //this.set("map",map);
-    marker.setMap(map);
-  }
-});
-
 /* google maps -----------------------------------------------------*/
 google.maps.event.addDomListener(window, 'load', initialize);
+
 function initialize() {
 
   /* position Amsterdam */
@@ -56,7 +9,7 @@ function initialize() {
   var mapOptions = {
     center: latlng,
     scrollWheel: false,
-    zoom: 13
+    zoom: 8
   };
 
   var marker = new google.maps.Marker({
@@ -65,7 +18,26 @@ function initialize() {
     animation: google.maps.Animation.DROP
   });
 
-  var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+  var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
   marker.setMap(map);
 
 };
+
+
+
+   var im= new Array()//set your pictures here as an array
+	                im[0] = './images/1.JPG';
+	                im[1] = './images/2.JPG';
+	                im[2] = './images/3.JPG';
+	                im[3] = './images/4.JPG';
+	                im[4] = './images/5.JPG';
+	                im[5] = './images/6.JPG';
+	                var time = 2000; // set delay in miliseconds
+	                var q=1;
+	                function slideI(){
+	                document.getElementById('ima').setAttribute('src',im[q]);
+	                q++;
+	                if(q==im.length){q=0}
+	                setTimeout('slideI()',time);
+	                }
+	                onload=function(){setTimeout('slideI()',time)}
