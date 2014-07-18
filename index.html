@@ -29,40 +29,42 @@
       background-color: white;
       border-color: #080808;
     }
-
-.page-section {
-  width: 100%;
-  min-height: 800px;
-  padding: 50px 0;
-  border-bottom: 10px solid #fff;
-}
-  .page-section#aboutus {
-  background: url(images/bio.jpg) bottom center no-repeat;
-}
-
-
-.panel-primary>.panel-heading {
-background-color: rgb(137, 209, 29);
-}
-#map-outer {height: 440px; padding: 20px; border: 2px solid #CCC; margin-bottom: 20px; background-color:#FFF }
-	  #map-canvas { height: 400px }
-	  @media all and (max-width: 768px) {
-		#map-outer  { height: 650px }
-}
-.list-group-item>.badge {
-float: left;
-}
+	.page-section {
+	  width: 100%;
+	  min-height: 800px;
+	  padding: 50px 0;
+	  border-bottom: 10px solid #fff;
+	}
+	.page-section#aboutus {
+	  background: url(images/bio.jpg) bottom center no-repeat;
+	}
+	.panel-primary>.panel-heading {
+		background-color: rgb(137, 209, 29);
+	}
+	#map-outer {height: 440px; padding: 20px; border: 2px solid #CCC; margin-bottom: 20px; background-color:#FFF }
+		  #map-canvas { height: 400px }
+		  @media all and (max-width: 768px) {
+			#map-outer  { height: 650px }
+	}
+	.list-group-item>.badge {
+		float: left;
+	}
 </style>
-  </head>
+
+    <!-- Custom styles for this template -->
+    <link href="stylesheets/app.css" rel="stylesheet">
+
+</head>
 <!-- NAVBAR
 ================================================== -->
   <body>
 	<script type="text/x-handlebars">
     <div class="container-fluid">
+
 		<div class="header">
 			<ul class="nav nav-pills pull-left">
-				<li><a href="#" class="btn btn-link navbar-btn"><img  class="img-responsive" src="./images/image002_50.png"></a></li>
-			  <li class="active"><a href="#">Home</a></li>
+			  <li><img  class="img-responsive" src="./images/image002_50.png"></li>
+			  <li class="active">{{#linkTo 'index'}}Home{{/linkTo}}</li>
 			  <li>{{#linkTo 'aboutus'}}About Us{{/linkTo}}</li>
 			  <li>{{#linkTo 'team'}}Team{{/linkTo}}</li>
 			  <li>{{#linkTo 'programs'}}Programs{{/linkTo}}</li>
@@ -70,26 +72,23 @@ float: left;
 			  <li>{{#linkTo 'gallery'}}Gallery{{/linkTo}}</li>
 			  <li>{{#linkTo 'contactus'}}Contact Us{{/linkTo}}</li>
 			</ul>
-
 		</div>
 
+		<div class="row col-md-12">&nbsp;</div>
 
-			<div class="row">
-				{{outlet}}
-			</div>
-
-
+		<div class="row">
+			{{outlet}}
+		</div>
 
 		<div class="row col-md-12">
 				  <p>&nbsp;&copy; 2014 Shanti Juniors - Alwarthiru Nagar,Chennai &middot; <a href="mailto:alwarthirunagar@shantijuniors.com">alwarthirunagar@shantijuniors.com</a> , +91-9445006651 , +91-9444187515</p>
 				  <img src="./images/footer.png" width="100%" height="200">
 		</div> <!-- End of footer row-->
-
     </div> <!-- /container -->
 	</script>
 
 
-	<script type="text/x-handlebars" data-template-name="index">
+<script type="text/x-handlebars" data-template-name="index">
 			<div class="col-md-12">
 					<div id="address" class="col-md-8">
 
