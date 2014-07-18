@@ -31,7 +31,8 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
   margin-bottom: 0;
-  font-weight: bold;
+  font-weight: bolder;
+  font-size: medium;
   color: #777;
   text-align: center;
   background-color: #e5e5e5; /* Old browsers */
