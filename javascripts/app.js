@@ -14,7 +14,10 @@ App.Router.map(function() {
   this.route("contactus", {path: "/contactus"});
   this.route("aboutus", {path: "/aboutus"});
   this.route("team", {path: "/team"});
+  this.route("curriculum", {path: "/curriculum"});
+  this.route("gallery", {path: "/gallery"});
   this.route("programs", {path: "/programs"});
+
 });
 
 App.MapView = Ember.ContainerView.extend({
