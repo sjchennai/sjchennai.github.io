@@ -60,8 +60,8 @@ float: left;
 	<script type="text/x-handlebars">
     <div class="container-fluid">
 		<div class="header">
-		<ul class="nav nav-pills">
-			<li><a href="#" class="btn btn-link navbar-btn"><img  class="img-responsive" src="./images/image002_50.png"></a></li>
+			<ul class="nav nav-pills pull-left">
+				<li><a href="#" class="btn btn-link navbar-btn"><img  class="img-responsive" src="./images/image002_50.png"></a></li>
 			  <li class="active"><a href="#">Home</a></li>
 			  <li>{{#linkTo 'aboutus'}}About Us{{/linkTo}}</li>
 			  <li>{{#linkTo 'team'}}Team{{/linkTo}}</li>
@@ -69,7 +69,7 @@ float: left;
 			  <li>{{#linkTo 'curriculum'}}Curriculum{{/linkTo}}</li>
 			  <li>{{#linkTo 'gallery'}}Gallery{{/linkTo}}</li>
 			  <li>{{#linkTo 'contactus'}}Contact Us{{/linkTo}}</li>
-		</ul>
+			</ul>
 
 		</div>
 
@@ -127,7 +127,14 @@ float: left;
 					</div>
 					<!-- Display Images -->
 					<div class="col-md-4">
-						<img id="ima" src="./images/1.JPG">
+
+					<div class="row">
+					    <a href="#" class="thumbnail">
+					      <img id="ima" src="./images/1.JPG" height="400">
+					    </a>
+					</div>
+
+
 					</div>
 			</div><!-- /map-outer -->
 	</script>
