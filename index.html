@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,7 +26,7 @@
 <style>
    .navbar a.navbar-brand {padding: 9px 15px 8px; }
    .navbar-inverse {
-   background-color: white;
+      background-color: white;
       border-color: #080808;
     }
 
@@ -41,6 +40,9 @@
   background: url(images/bio.jpg) bottom center no-repeat;
 }
 
+body{
+	background-color: #FFF212;
+}
 .panel-primary>.panel-heading {
 background-color: rgb(137, 209, 29);
 }
@@ -49,381 +51,317 @@ background-color: rgb(137, 209, 29);
 	  @media all and (max-width: 768px) {
 		#map-outer  { height: 650px }
 		}
-
-body {
-    margin: 10px;
-    background: white
-}
-/* Tab Navigation */
-.nav-tabs {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-.nav-tabs > li > a {
-    background: #DADADA;
-    border-radius: 0;
-    box-shadow: inset 0 -8px 7px -9px rgba(0,0,0,.4),-2px -2px 5px -2px rgba(0,0,0,.4);
-}
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:hover {
-    background: #F5F5F5;
-    box-shadow: inset 0 0 0 0 rgba(0,0,0,.4),-2px -3px 5px -2px rgba(0,0,0,.4);
-}
-
-/* Tab Content */
-.tab-pane {
-    background: #F5F5F5;
-    box-shadow: 0 0 4px rgba(0,0,0,.4);
-    border-radius: 0;
-    text-align: center;
-    padding: 10px;
-}
-
-.btn-success {
-color: #fff;
-background-color: white;
-border-color: white;
-}
 </style>
   </head>
 <!-- NAVBAR
 ================================================== -->
   <body>
-    <div class="container-fluid">
+	<script type="text/x-handlebars">
+    <div class="container">
 
 		<div class="header">
-			<a href="#" class="btn btn-link navbar-btn"><img  class="img-responsive" src="./images/image002_50.png"></a>
-			<a href="https://www.facebook.com/shantijuniors.chennai" target="_blank" class="btn btn-success btn-default enabled" role="button"><img src="./images/facebook.png" height="75" width="75"></a>
-			<a href="https://www.facebook.com/shantijuniors.chennai" target="_blank" class="btn btn-success btn-default enabled" role="button"><img src="./images/map.png" height="75" width="75"></a>
-			<a href="https://www.facebook.com/shantijuniors.chennai" target="_blank" class="btn btn-success btn-default enabled" role="button"><img src="./images/admission-open.jpg" height="75" width="200"></a>
+			<ul class="nav nav-pills pull-right">
+			  <li class="active"><a href="#">Home</a></li>
+			  <li>{{#linkTo 'aboutus'}}About Us{{/linkTo}}</li>
+			  <li>{{#linkTo 'team'}}Team{{/linkTo}}</li>
+			  <li>{{#linkTo 'programs'}}Programs{{/linkTo}}</li>
+			  <li>{{#linkTo 'contactus'}}Contact Us{{/linkTo}}</li>
+			</ul>
+			<a href="#" class="btn btn-link navbar-btn"><img  class="img-responsive" src="./images/logo.png"></a>
 		</div>
 
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs" role="tablist">
-      <li class="active">
-          <a href="#home" role="tab" data-toggle="tab">
-              <icon class="fa fa-home"></icon> Home
-          </a>
-      </li>
-      <li><a href="#aboutus" role="tab" data-toggle="tab">
-          <i class="fa fa-user"></i> About Us
-          </a>
-      </li>
-      <li>
-          <a href="#team" role="tab" data-toggle="tab">
-              <i class="fa fa-envelope"></i> Team
-          </a>
-      </li>
-      <li>
-          <a href="#programs" role="tab" data-toggle="tab">
-              <i class="fa fa-cog"></i> Programs
-          </a>
-      </li>
-            <li>
-	            <a href="#contactus" role="tab" data-toggle="tab">
-	                <i class="fa fa-cog"></i> Contact Us
-	            </a>
-      </li>
-    </ul>
 
-    <!-- Tab panes -->
-    <div class="tab-content">
+			<div class="row">
+				{{outlet}}
+			</div>
 
-      <div class="tab-pane fade active in" id="home">
-        <div class="row">
-        	<div class="col-md-12">
-				<div class="col-md-8">
-						<div id="directors" class="panel panel-primary">
-						<div class="panel-heading"><h3 class="panel-title"><strong>Message from our directors!</strong></h3></div>
+
+
+		<div class="row">
+		  <div class="footer">
+					<p class="pull-right"><a href="#">Back to top</a></p>
+				  <p>&copy; 2014 Shanti Juniors - Alwarthiru Nagar,Chennai &middot; <a href="mailto:alwarthirunagar@shantijuniors.com">alwarthirunagar@shantijuniors.com</a> , +91-9445006651 , +91-9444187515</p>
+				  <img src="./images/footer.png"/>
+
+		  </div>
+		</div> <!-- End of footer row-->
+
+    </div> <!-- /container -->
+	</script>
+
+
+	<script type="text/x-handlebars" data-template-name="index">
+			<div class="col-md-12">
+					<div id="address" class="col-md-8">
+
+<div id="directors" class="panel panel-primary">
+	<div class="panel-heading"><h3 class="panel-title"><strong>Message from our directors!</strong></h3></div>
+	<div class="panel-body">
+		<ul class="list-group list-group-flush">
+
+					<li class="list-group-item">
+											<p>
+																					Study after study shows quality preschool is an educational springboard that prepares children to learn and succeed in education, careers, and life. Neuroscientists have found that early experiences, particularly from birth to age five, shape a child's brain and development and can have long-lasting effects, ultimately preparing children for a brighter future.
+																				</p>
+																				<p>
+																					"Shanti Juniors" is a well known chain of play school addressing the educational needs of early childhood years by following developmentally appropriate practices. We celebrate childhood through the unique blend of international approaches amalgamated with Indian culture. We provide age appropriate early childhood care and education programs integrated with technology in a joyful environment to lay a strong foundation for our happy and righteous children to be responsible citizens of the world.
+																				</p>
+																				<p>
+																					At our Alwarthirunagar center, we are committed to bringing the highest quality of early childhood education and care for your children and your family. We started this preschool with a mission to provide un-compromised education and care to every single child in the center. Our utmost priority is to provide a safe, healthy, comfortable and friendly environment for every child. We believe that only when a child feels comfortable and happy, he/she starts learning at an unimaginable pace. We carefully handpick qualified, caring and dedicated staff to ensure that every single child is given individual attention.
+																				</p>
+																				<p>
+																					We assure you that you will never regret for your decision to enrol your child here at our center. We are happy to clarify any of your questions, hence free to contact us.
+																				</p>
+																				<p>
+																					<strong>G.Murugesan and V.Shreedharan <br>
+																					Retired Engineers of Hindustan Teleprinters Ltd (Govt of India).
+																				</strong>
+									</p>
+					</li>
+
+
+		</ul>
+	</div>
+</div>
+
+
+					</div>
+					<!-- Display Images -->
+					<div class="col-md-4">
+						<img id="ima" src="./images/1.JPG">
+					</div>
+			</div><!-- /map-outer -->
+	</script>
+
+	<div class="row">
+	</div>
+
+	<script type="text/x-handlebars" data-template-name="contactus">
+			<div id="map-outer" class="col-md-12">
+
+					<div id="address" class="col-md-4">
+
+					<div id="directors" class="panel panel-primary">
+						<div class="panel-heading"><h3 class="panel-title"><strong>Our Location</strong></h3></div>
 						<div class="panel-body">
 							<ul class="list-group list-group-flush">
 
 										<li class="list-group-item">
-																<p>
-																										Study after study shows quality preschool is an educational springboard that prepares children to learn and succeed in education, careers, and life. Neuroscientists have found that early experiences, particularly from birth to age five, shape a child's brain and development and can have long-lasting effects, ultimately preparing children for a brighter future.
-																									</p>
-																									<p>
-																										"Shanti Juniors" is a well known chain of play school addressing the educational needs of early childhood years by following developmentally appropriate practices. We celebrate childhood through the unique blend of international approaches amalgamated with Indian culture. We provide age appropriate early childhood care and education programs integrated with technology in a joyful environment to lay a strong foundation for our happy and righteous children to be responsible citizens of the world.
-																									</p>
-																									<p>
-																										At our Alwarthirunagar center, we are committed to bringing the highest quality of early childhood education and care for your children and your family. We started this preschool with a mission to provide un-compromised education and care to every single child in the center. Our utmost priority is to provide a safe, healthy, comfortable and friendly environment for every child. We believe that only when a child feels comfortable and happy, he/she starts learning at an unimaginable pace. We carefully handpick qualified, caring and dedicated staff to ensure that every single child is given individual attention.
-																									</p>
-																									<p>
-																										We assure you that you will never regret for your decision to enrol your child here at our center. We are happy to clarify any of your questions, hence free to contact us.
-																									</p>
-																									<p>
-																										<strong>G.Murugesan and V.Shreedharan <br>
-																										Retired Engineers of Hindustan Teleprinters Ltd (Govt of India).
-																									</strong>
-														</p>
+																<address>
+																						<!--strong class="lead">Shanthi Juniors</strong><br-->
+																						<p>
+																							10/4, Chidambaranar street<br>
+																							Alwarthirunagar<br>
+																							Chennai<br>
+																							India 600087<br>
+																							<abbr>P:</abbr> +91-9445006651 , +91-9444187515<br>
+																							<abbr>Email:</abbr> <a href="mailto:alwarthirunagar@shantijuniors.com">alwarthirunagar@shantijuniors.com</a>
+																						</p>
+						</address>
 										</li>
 
 
 							</ul>
 						</div>
 					</div>
+
+					</div>
+
+
+
+
+					{{#view App.MapView contentBinding="this"}}
+					      <div id="map-canvas" class="col-md-8"></div>
+      				{{/view}}
+			</div><!-- /map-outer -->
+	</script>
+
+
+<script type="text/x-handlebars" data-template-name="aboutus">
+			<div class="col-md-12">
+					<div id="address" class="col-md-8">
+
+
+					<div id="directors" class="panel panel-primary">
+						<div class="panel-heading"><h3 class="panel-title"><strong>Shanti Juniors</strong></h3></div>
+						<div class="panel-body">
+							<ul class="list-group list-group-flush">
+
+										<li class="list-group-item">
+																<p>
+																										"Shanti Juniors" is a well known chain of play school addressing the educational needs of early childhood years by following developmentally appropriate practices. We celebrate childhood through the unique blend of international approaches amalgamated with Indian culture. We provide age appropriate early childhood care and education programs integrated with technology in a joyful environment to lay a strong foundation for our happy and righteous children to be responsible citizens of the world.
+																									</p>
+																									<br>
+										</li>
+
+							</ul>
+						</div>
 				</div>
-				<div class="col-md-4">
-					<img id="ima" src="./images/1.JPG">
+
+					<div id="directors" class="panel panel-primary">
+						<div class="panel-heading"><h3 class="panel-title"><strong>Our Center</strong></h3></div>
+						<div class="panel-body">
+							<ul class="list-group list-group-flush">
+
+										<li class="list-group-item">
+																<p>
+																									<p>
+																									Our Alwarthirunagar center, is located in a quiet and less polluted residential neighbourhood. Our beautiful, comfortable environment is safe, nurturing, and specifically designed to optimize the development of young hearts and minds. We focus on developing the child's academic, physical, social and language skills that will enable them to be successful in the future.
+																									</p>
+																									<p>
+																									We respect the unique set of talents and challenges for each child. Our teachers and caretakers are trained to help each child play, learn and explore new skills and activities. They recognize each success, challenge, and effort, and reflect these back to the children. In such a personally supportive environment, children feel secure and optimistic. They seek out new challenges and learn how to solve problems.
+																									</p>
+																									<p>
+																									Our aim is to provide un-compromised education and care to every single child in the center. Our utmost priority is to provide a safe, healthy, comfortable and friendly environment for every child. We believe that only when a child feels comfortable and happy, he/she starts learning at an unimaginable pace.
+									</p>
+										</li>
+
+							</ul>
+						</div>
 				</div>
-			</div>
-		</div>
-      </div>
-      <div class="tab-pane fade" id="aboutus">
-        <div class="row">
-        	<div class="col-md-12">
-				<div class="col-md-8">
-										<div id="directors" class="panel panel-primary">
-											<div class="panel-heading"><h3 class="panel-title"><strong>Shanti Juniors</strong></h3></div>
-											<div class="panel-body">
-												<ul class="list-group list-group-flush">
-
-															<li class="list-group-item">
-																					<p>
-																															"Shanti Juniors" is a well known chain of play school addressing the educational needs of early childhood years by following developmentally appropriate practices. We celebrate childhood through the unique blend of international approaches amalgamated with Indian culture. We provide age appropriate early childhood care and education programs integrated with technology in a joyful environment to lay a strong foundation for our happy and righteous children to be responsible citizens of the world.
-																														</p>
-																														<br>
-															</li>
-
-												</ul>
-											</div>
-									</div>
-
-										<div id="directors" class="panel panel-primary">
-											<div class="panel-heading"><h3 class="panel-title"><strong>Our Center</strong></h3></div>
-											<div class="panel-body">
-												<ul class="list-group list-group-flush">
-
-															<li class="list-group-item">
-																					<p>
-																														<p>
-																														Our Alwarthirunagar center, is located in a quiet and less polluted residential neighbourhood. Our beautiful, comfortable environment is safe, nurturing, and specifically designed to optimize the development of young hearts and minds. We focus on developing the child's academic, physical, social and language skills that will enable them to be successful in the future.
-																														</p>
-																														<p>
-																														We respect the unique set of talents and challenges for each child. Our teachers and caretakers are trained to help each child play, learn and explore new skills and activities. They recognize each success, challenge, and effort, and reflect these back to the children. In such a personally supportive environment, children feel secure and optimistic. They seek out new challenges and learn how to solve problems.
-																														</p>
-																														<p>
-																														Our aim is to provide un-compromised education and care to every single child in the center. Our utmost priority is to provide a safe, healthy, comfortable and friendly environment for every child. We believe that only when a child feels comfortable and happy, he/she starts learning at an unimaginable pace.
-														</p>
-															</li>
-
-												</ul>
-											</div>
-									</div>
 
 
-										</div>
+					</div>
 					<!-- Display Images -->
-				<div class="col-md-4">
-					<img id="ima" src="./images/1.JPG">
-				</div>
-			</div>
-		</div>
-      </div>
-      <div class="tab-pane fade" id="team">
-        <div class="row">
-        	<div class="col-md-12">
-				<div class="col-md-8">
+					<div class="col-md-4">
+						<img id="ima" src="./images/1.jpg">
+					</div>
+			</div><!-- /map-outer -->
+	</script>
+
+
+	<script type="text/x-handlebars" data-template-name="team">
+				<div class="col-md-12">
+						<div id="address" class="col-md-8">
+
+
 <div id="directors" class="panel panel-primary">
 	<div class="panel-heading"><h3 class="panel-title"><strong>Directors</strong></h3></div>
 	<div class="panel-body">
-		        												<p>Mr.Murugesan and Mr.Shreedharan are retired engineers of Hindustan Teleprinters Ltd (Govt of India). With over 30 years of rich industrial experience, they are now on a mission to provide exemplary education in a positive environment that is most conducive to learning. They are committed to provide highest quality of early childhood education and care for your children with a moral and non-profit motive.</p>
-	<div class="row">
+		<ul class="list-group list-group-flush">
 
-	  <div class="col-sm-6 col-md-4">
-	    <div class="thumbnail">
-	      <img src="./images/director_m.png" alt="...">
-	      <div class="caption">
-					<p>
-					"Although each kid is different, I believe one common characteristic of every child is their their desire to be loved. When they get the love, affection and attention in a healthy atmosphere, their growth becomes exponential.", <strong>Murugesan.</strong>
-					</p>
-	      </div>
-	    </div>
-	  </div>
+					<li class="list-group-item">
+											<h4 class="list-group-item-heading">G.Murugesan</h4>
+												TBD
+					</li>
+					<li class="list-group-item">
+											<h4 class="list-group-item-heading">V.Shreedharan</h4>
+												TBD
+					</li>
 
-	  <div class="col-sm-6 col-md-4">
-	    <div class="thumbnail">
-	      <img src="./images/director_p.png" alt="...">
-	      <div class="caption">
-					<p>
-					"It is the duty of every parent and teacher to ensure that we teach the children to love to learn. I believe in friendly and playful teaching techniques that kindles the curiosity of the young master minds!", <strong>Shreedhran.</strong>
-					</p>
-	      </div>
-	    </div>
-	  </div>
-
-	</div>
-
-
-
+		</ul>
 	</div>
 </div>
 
 <div id="directors" class="panel panel-primary">
-
-	<div class="panel-heading"><h3 class="panel-title"><strong>Coordinator</strong></h3></div>
+	<div class="panel-heading"><h3 class="panel-title"><strong>Teachers</strong></h3></div>
 	<div class="panel-body">
-	<p>Mrs. Padma is the center's educational coordinator and teacher. She is very passionate and dedicated towards her work. She is a graduate with and has about 10 years of experience in early education.</p>
-	<div class="row">
+		<ul class="list-group list-group-flush">
 
-	  <div class="col-sm-6 col-md-4">
-	    <div class="thumbnail">
-	      <img src="./images/coordinator.jpg" alt="...">
-	      <div class="caption">
-					<p>
-					"Being a teacher of young children is a very gratifying job, you get hugs and kisses on a daily basis, what else can you ask from life. Children are very forgiving, they don't care if you have a beautiful voice or know how to dance, all they care about is that you love and care for them. I love my job!", <strong>Padma</strong>
-					</p>
-	      </div>
-	    </div>
-	  </div>
-	</div>
+					<li class="list-group-item">
+											<h4 class="list-group-item-heading">G.Murugesan</h4>
+												TBD
+					</li>
+					<li class="list-group-item">
+											<h4 class="list-group-item-heading">V.Shreedharan</h4>
+												TBD
+					</li>
 
-
+		</ul>
 	</div>
 </div>
 
 <div id="directors" class="panel panel-primary">
-	<div class="panel-heading"><h3 class="panel-title"><strong>Teacher</strong></h3></div>
+	<div class="panel-heading"><h3 class="panel-title"><strong>Care Takers</strong></h3></div>
 	<div class="panel-body">
-		<p>Teacher is the instructor. She is a graduate with and has about 10 years of experience in montessori method of teaching.</p>
+		<ul class="list-group list-group-flush">
 
-	<div class="row">
+					<li class="list-group-item">
+											<h4 class="list-group-item-heading">G.Murugesan</h4>
+												TBD
+					</li>
+					<li class="list-group-item">
+											<h4 class="list-group-item-heading">V.Shreedharan</h4>
+												TBD
+					</li>
 
-	  <div class="col-sm-6 col-md-4">
-	    <div class="thumbnail">
-	      <img src="./images/teacher.jpg" alt="...">
-	      <div class="caption">
-					<p>
-					"I love being a part of development of each child and sharing precious memories with their families.", <strong>Padma</strong>
-					</p>
-	      </div>
-	    </div>
-	  </div>
-	</div>
+		</ul>
 	</div>
 </div>
 
 						</div>
-				<div class="col-md-4">
-					<img id="ima" src="./images/1.JPG">
-				</div>
-			</div>
-		</div>
-      </div>
+						<!-- Display Images -->
+						<div class="col-md-4">
+							<img id="ima" src="./images/1.jpg">
+						</div>
+				</div><!-- /map-outer -->
+	</script>
 
-      <div class="tab-pane fade" id="programs">
-        <div class="row">
-        	<div class="col-md-12">
-				<div class="col-md-8">
+<script type="text/x-handlebars" data-template-name="programs">
+				<div class="col-md-12">
+						<div id="address" class="col-md-8">
+
 <div id="directors" class="panel panel-primary">
-	<div class="panel-heading"><h3 class="panel-title"><strong>1.5 months - 2.5 yrs</strong></h3></div>
+	<div class="panel-heading"><h3 class="panel-title"><strong>6 months - 1.5 yrs</strong></h3></div>
 	<div class="panel-body">
-		<ul class="list-group">
-		  <li class="list-group-item list-group-item-success">Gradually transition from home to a semiformal school environment.</li>
-		  <li class="list-group-item list-group-item-info">Get introduced to alphabets and numbers </li>
-		  <li class="list-group-item list-group-item-warning">Learn to recognize phonic sounds </li>
-		  <li class="list-group-item list-group-item-danger">Be able to identify different shapes </li>
-		  <li class="list-group-item list-group-item-success">Be able to allowed to master gross and fine motor skills </li>
+		<ul class="list-group list-group-flush">
+
+					<li class="list-group-item">
+											<h4 class="list-group-item-heading">G.Murugesan</h4>
+												TBD
+					</li>
+					<li class="list-group-item">
+											<h4 class="list-group-item-heading">V.Shreedharan</h4>
+												TBD
+					</li>
+
 		</ul>
 	</div>
 </div>
 
 <div id="directors" class="panel panel-primary">
-	<div class="panel-heading"><h3 class="panel-title"><strong>2.5 yrs - 3.5 yrs</strong></h3></div>
+	<div class="panel-heading"><h3 class="panel-title"><strong>1.5 yrs - 3 yrs</strong></h3></div>
 	<div class="panel-body">
-		<ul class="list-group">
-		  <li class="list-group-item list-group-item-success">Learn how to play and work as a group</li>
-		  <li class="list-group-item list-group-item-info">Learn the art of communication</li>
-		  <li class="list-group-item list-group-item-warning">Start identifying all alphabets and numbers upto 50</li>
-		  <li class="list-group-item list-group-item-danger">Learn to recognize colors</li>
-		  <li class="list-group-item list-group-item-success">Be able to identify common animals, birds, flowers, vegetables etc</li>
+		<ul class="list-group list-group-flush">
+
+					<li class="list-group-item">
+											<h4 class="list-group-item-heading">G.Murugesan</h4>
+												TBD
+					</li>
+					<li class="list-group-item">
+											<h4 class="list-group-item-heading">V.Shreedharan</h4>
+												TBD
+					</li>
+
 		</ul>
 	</div>
 </div>
 
 <div id="directors" class="panel panel-primary">
-	<div class="panel-heading"><h3 class="panel-title"><strong>3.5 yrs to 4.5 yrs</strong></h3></div>
+	<div class="panel-heading"><h3 class="panel-title"><strong>3 yrs and above</strong></h3></div>
 	<div class="panel-body">
-	<div class="panel-body">
-		<ul class="list-group">
-		  <li class="list-group-item list-group-item-success">Be exposed to formal education </li>
-		  <li class="list-group-item list-group-item-info">Be introduced to CBSE Syllabus</li>
-		  <li class="list-group-item list-group-item-warning">Cover Jr.Kg syllabus curriculum</li>
+		<ul class="list-group list-group-flush">
+
+					<li class="list-group-item">
+											<h4 class="list-group-item-heading">G.Murugesan</h4>
+												TBD
+					</li>
+					<li class="list-group-item">
+											<h4 class="list-group-item-heading">V.Shreedharan</h4>
+												TBD
+					</li>
+
 		</ul>
-	</div>
-
-	</div>
-</div>
-
-
-<div id="directors" class="panel panel-primary">
-	<div class="panel-heading"><h3 class="panel-title"><strong>4.5 yrs to 5.5 yrs</strong></h3></div>
-	<div class="panel-body">
-	<div class="panel-body">
-		<ul class="list-group">
-		  <li class="list-group-item list-group-item-success">Be well accustomed to formal education </li>
-		  <li class="list-group-item list-group-item-info">Cover Sr.Kg syllabus curriculum </li>
-		  <li class="list-group-item list-group-item-warning">Be ready for first grade </li>
-		</ul>
-	</div>
-
 	</div>
 </div>
 
 						</div>
-				<div class="col-md-4">
-					<img id="ima" src="./images/1.JPG">
-				</div>
-			</div>
-		</div>
-      </div>
-
-      <div class="tab-pane fade" id="contactus">
-        <div class="row">
-        	<div class="col-md-12">
-				<div class="col-md-4">
-				<div id="directors" class="panel panel-primary">
-										<div class="panel-heading"><h3 class="panel-title"><strong>Our Location</strong></h3></div>
-										<div class="panel-body">
-											<ul class="list-group list-group-flush">
-
-														<li class="list-group-item">
-																				<address>
-																										<!--strong class="lead">Shanthi Juniors</strong><br-->
-																										<p>
-																											10/4, Chidambaranar street<br>
-																											Alwarthirunagar<br>
-																											Chennai<br>
-																											India 600087<br>
-																											<abbr>P:</abbr> +91-9445006651 , +91-9444187515<br>
-																											<abbr>Email:</abbr> <a href="mailto:alwarthirunagar@shantijuniors.com">alwarthirunagar@shantijuniors.com</a>
-																										</p>
-										</address>
-														</li>
-
-
-											</ul>
-										</div>
-									</div>
-
-					</div>
-				<div class="col-md-8">
-					<div id="map-canvas"></div>
-				</div>
-			</div>
-		</div>
-      </div>
-
-    </div> <!-- End of tab-content-->
-
-	<div class="row">
-		<img src="./images/footer.png" height="200" width="100%" >
-	</div>
-
-    </div> <!-- /container -->
-
-
+						<!-- Display Images -->
+						<div class="col-md-4">
+							<img id="ima" src="./images/1.jpg">
+						</div>
+				</div><!-- /map-outer -->
+	</script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
