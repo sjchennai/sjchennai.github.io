@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta property="og:title" content="Shanti Juniors Chennai" />
+	<meta property="og:type" content='website' />
+	<meta property="og:url" content="http://sjchennai.github.io/" />
+	<meta property="og:description" content="A new welcome to Shanti Juniors. We at Shanti Juniors (SJ) believe in celebrating childhood with the same intensity and love as you do for your child. A 2nd home of your child, where he/she learns the external world through our own teaching methodology."/>
+	<meta property="og:image" content="http://www.shantijuniors.com/images/logo.png"/>
+	<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+	<link rel='icon' href='./images/favicon.ico' type='image/x-icon' />
+
+
+    <title>Welcome to Shanti Juniors - Chennai</title>
+    <!-- Bootstrap core CSS -->
+    <link href="./stylesheets/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="./stylesheets/carousel.css" rel="stylesheet">
+
+<style>
+   .navbar a.navbar-brand {padding: 9px 15px 8px; }
+   .navbar-inverse {
+      background-color: white;
+      border-color: #080808;
+    }
+	.page-section {
+	  width: 100%;
+	  min-height: 800px;
+	  padding: 50px 0;
+	  border-bottom: 10px solid #fff;
+	}
+	.page-section#aboutus {
+	  background: url(images/bio.jpg) bottom center no-repeat;
+	}
+	.panel-primary>.panel-heading {
+		background-color: rgb(137, 209, 29);
+	}
+
+
+	#map-canvas { height: 400px }
+		  @media all and (max-width: 768px) {
+			#map-outer  { height: 650px }
+	}
+
+	.list-group-item>.badge {
+		float: left;
+	}
+
+	.well {
+		 min-height: 10px;
+		 padding: 5px;
+		 margin-bottom: 20px;
+		 background-color: #FFF500;
+		 border: 1px solid #DF2323;
+		 border-radius: 4px;
+		 -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+		 box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+	}
+
+	.ticker {
+ 	 width: 600px;
+ 	 margin: 10px auto;
+	}
+
+	.ticker div {
+	  display: inline-block;
+	  word-wrap: break-word;
+	}
+</style>
+
+    <!-- Custom styles for this template -->
+    <!--link href="stylesheets/app.css" rel="stylesheet"-->
+
+</head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+	<script type="text/x-handlebars">
+    <div class="container-fluid">
+
+		<div class="header">
+			<ul class="nav nav-pills pull-left">
+			  <li><img  class="img-responsive" src="./images/logo.png"></li>
+			  <li class="active">{{#linkTo 'index'}}Home{{/linkTo}}</li>
+			  <li>{{#linkTo 'aboutus'}}About Us{{/linkTo}}</li>
+			  <li>{{#linkTo 'team'}}Team{{/linkTo}}</li>
+			  <li>{{#linkTo 'programs'}}Programs{{/linkTo}}</li>
+			  <li>{{#linkTo 'curriculum'}}Curriculum{{/linkTo}}</li>
+			  <li>{{#linkTo 'gallery'}}Gallery{{/linkTo}}</li>
+			  <li>{{#linkTo 'contactus'}}Contact Us{{/linkTo}}</li>
+			  <li><a target="_blank" href="http://www.facebook.com/shantijuniors.chennai"><img src="./images/facebook.png"></a></li>
+			  <li><a target="_blank" href="https://www.google.com/maps/place/10,+Chidambaranar+St,+Ramakrishna+Nagar,+Valasaravakkam,+Chennai,+Tamil+Nadu+600095,+India/@13.0476371,80.1833448,17z/data=!3m1!4b1!4m2!3m1!1s0x3a526133b58c8107:0x12748e091c93c51d"><img src="./images/map.png"></a></li>
+			</ul>
+		</div>
+
+		<div class="row col-md-12">&nbsp;</div>
+		<div class="row col-md-12">&nbsp;</div>
+		<div class="row col-md-12">&nbsp;</div>
+
+		<!-- Latest News Section-->
+		<div class="row">
+			<div class="col-md-8">
+				{{#view App.NewsView}}
+					<div id="ticker" class="well well-sm ticker">
+						<strong>Latest News:</strong>
+						<ul>
+							<li>Admissions Open. Contact us now!</li>
+							<li>We just launched a new facebook page, <a href="http://www.facebook.com/shantijuniors.chennai">Visit us on facebook</a></li>
+						</ul>
+					</div>
+      			{{/view}}
+      		</div>
+		</div>
+
+		<div class="row">
+			{{outlet}}
+		</div>
+
+		<div class="row col-md-12">
+
+				  <p>&nbsp;&copy; 2014 Shanti Juniors - Alwarthiru Nagar,Chennai &middot; <a href="mailto:alwarthirunagar@shantijuniors.com">alwarthirunagar@shantijuniors.com</a> , +91-9445006651 , +91-9444187515</p>
+		</div> <!-- End of footer row-->
+
+    </div> <!-- /container -->
+    <img src="images/lion_footer.png" margin="0" width="100%" height="100%">
+	</script>
+
+
+<script type="text/x-handlebars" data-template-name="index">
+			<div class="col-md-12">
+					<div id="address" class="col-md-8">
+
+<div id="directors" class="panel panel-primary">
+	<div class="panel-heading"><h3 class="panel-title"><strong>Welcome to Shanti Juniors, Chennai!</strong></h3></div>
+	<div class="panel-body">
+		<ul class="list-group list-group-flush">
+
+					<li class="list-group-item">
+
+<p>
+Introducing <b> "Shanti Juniors"</b>, for the first time in Chennai! Shanti Juniors is a well known chain of play schools, with over <b>150 branches</b> all over India, successfully educating young minds.
+<br> <br>
+Features of our Alwarthirunagar center:
+<br><br><span class="glyphicon glyphicon-hand-right"></span>&nbsp;Focus on child's academic, physical, social and language skills
+<br><br><span class="glyphicon glyphicon-hand-right"></span>&nbsp;Located a quiet and less polluted residential neighbourhood
+<br><br><span class="glyphicon glyphicon-hand-right"></span>&nbsp;Qualified, experienced and friendly staff
+<br><br><span class="glyphicon glyphicon-hand-right"></span>&nbsp;Provide age appropriate early childhood education to kids from 1.5 yrs to 5.5 yrs
+<br><br><span class="glyphicon glyphicon-hand-right"></span>&nbsp;Offer day care options at nominal prices and extended hours
+<br><br><span class="glyphicon glyphicon-hand-right"></span>&nbsp;Flexible payment plans
+</p>
+<br>																			
+<p>
+
+<b>
+ <!--FONT SIZE="5" FACE="courier" COLOR=red> <marquee behavior="ALTERNATE" direction="left" BGColor=yellow loop="100 ">Admissions Open. Contact us now!</marquee></font-->
+
+
+</b>
+</p>
+
+					</li>
+
+
+		</ul>
+
+	</div>
+
+</div>
+
+
+					</div>
+					<!-- Display Images -->
+					<div class="col-md-4">
+				    	<a href="#" class="thumbnail">
+					      <img id="ima" src="./images/1.JPG" >
+					    </a>
+					</div>
+			</div><!-- /map-outer -->
+	</script>
+
+	<div class="row">
+	</div>
+
+	<script type="text/x-handlebars" data-template-name="contactus">
+			<div id="map-outer" class="col-md-12">
+
+					<div id="address" class="col-md-4">
+
+					<div id="directors" class="panel panel-primary">
+						<div class="panel-heading"><h3 class="panel-title"><strong>Our Location</strong></h3></div>
+						<div class="panel-body">
+							<ul class="list-group list-group-flush">
+
+										<li class="list-group-item">
+																<address>
+																						<!--strong class="lead">Shanthi Juniors</strong><br-->
+																						<p>
+																							10/4, Chidambaranar street<br>
+																							Alwarthirunagar<br>
+																							Chennai<br>
+																							India 600087<br>
+																							<abbr>P:</abbr> +91-9445006651 , +91-9444187515<br>
+																							<abbr>Email:</abbr> <a href="mailto:alwarthirunagar@shantijuniors.com">alwarthirunagar@shantijuniors.com</a>
+																						</p>
+						</address>
+										</li>
+
+
+							</ul>
+						</div>
+					</div>
+
+					</div>
+
+
+
+
+					{{#view App.MapView contentBinding="this"}}
+					      <div id="map-canvas" class="col-md-8"></div>
+      				{{/view}}
+			</div><!-- /map-outer -->
+	</script>
+
+
+<script type="text/x-handlebars" data-template-name="aboutus">
+			<div class="col-md-12">
+					<div id="address" class="col-md-8">
+
+
+					<div id="directors" class="panel panel-primary">
+						<div class="panel-heading"><h3 class="panel-title"><strong>Message from our directors!</strong></h3></div>
+						<div class="panel-body">
+							<ul class="list-group list-group-flush">
+
+															<li class="list-group-item">
+											<p>
+																					Study after study shows quality preschool is an educational springboard that prepares children to learn and succeed in education, careers, and life. Neuroscientists have found that early experiences, particularly from birth to age five, shape a child's brain and development and can have long-lasting effects, ultimately preparing children for a brighter future.
+																				</p>
+																				<p>
+																					We are the first branch of <b>"Shanti Juniors"</b> in Chennai. Shanti Juniors is a well known chain of play schools with over 150 branches successfully managed all over India. It addresses the educational needs of early childhood years by following developmentally appropriate practices. Shanti Juniors celebrate childhood through the unique blend of international approaches amalgamated with Indian culture. They provide age appropriate early childhood care and education programs integrated with technology in a joyful environment to lay a strong foundation for our happy and righteous children to be responsible citizens of the world.
+																				</p>
+																				<p>
+																					At our Alwarthirunagar center, we are committed to bringing the highest quality of early childhood education and care for your children and your family. We started this preschool with a mission to provide un-compromised education and care to every single child in the center. Our utmost priority is to provide a safe, healthy, comfortable and friendly environment for every child. We believe that only when a child feels comfortable and happy, he/she starts learning at an unimaginable pace. We carefully handpick qualified, caring and dedicated staff to ensure that every single child is given individual attention.
+																				</p>
+																				<p>
+																					We assure you that you will never regret for your decision to enrol your child here at our center. We are happy to clarify any of your questions, hence free to contact us.
+																				</p>
+																				<p>
+																					<strong>G.Murugesan and V.Shreedharan <br>
+																					Retired Engineers of Hindustan Teleprinters Ltd (Govt of India).
+																				</strong>
+									</p>
+																				<br>
+										</li>
+
+							</ul>
+						</div>
+				</div>
+
+					<div id="directors" class="panel panel-primary">
+						<div class="panel-heading"><h3 class="panel-title"><strong>Our Center</strong></h3></div>
+						<div class="panel-body">
+							<ul class="list-group list-group-flush">
+
+										<li class="list-group-item">
+																<p>
+																									<p>
+																									Our Alwarthirunagar center, is located in a quiet and less polluted residential neighbourhood. Our beautiful, comfortable environment is safe, nurturing, and specifically designed to optimize the development of young hearts and minds. We focus on developing the child's academic, physical, social and language skills that will enable them to be successful in the future.
+																									</p>
+																									<p>
+																									We respect the unique set of talents and challenges for each child. Our teachers and caretakers are trained to help each child play, learn and explore new skills and activities. They recognize each success, challenge, and effort, and reflect these back to the children. In such a personally supportive environment, children feel secure and optimistic. They seek out new challenges and learn how to solve problems.
+																									</p>
+																									<p>
+																									Our aim is to provide un-compromised education and care to every single child in the center. Our utmost priority is to provide a safe, healthy, comfortable and friendly environment for every child. We believe that only when a child feels comfortable and happy, he/she starts learning at an unimaginable pace.
+									</p>
+										</li>
+
+							</ul>
+						</div>
+				</div>
+
+
+					</div>
+					<!-- Display Images -->
+					<div class="col-md-4">
+						<a href="#" class="thumbnail">
+							<img id="ima" src="./images/1.JPG">
+						</a>
+					</div>
+			</div><!-- /map-outer -->
+	</script>
+
+
+	<script type="text/x-handlebars" data-template-name="team">
+
+        <div class="row">
+        	<div class="col-md-12">
+				<div class="col-md-8">
+<div id="directors" class="panel panel-primary">
+	<div class="panel-heading"><h3 class="panel-title"><strong>Directors</strong></h3></div>
+	<div class="panel-body">
+		        	<p><b>Mr.Murugesan</b> (Mechanical Engineer) and <b>Mr.Shreedharan </b>(Electronics Engineer) are retired Engineering Managers of Hindustan Teleprinters Ltd (Govt of India). They have about 35 years of experience in the public Sector company and have served various departments like R&D, Production, Customer support, Human Resources and Administration with Industrial Relations. With this rich industrial experience, they are now on a mission to provide exemplary education in a positive environment that is most conducive to learning. They are committed to provide highest quality of early childhood education and care for your children with a moral and non-profit motive.</p>
+
+<p style="font-family: calibri, Garamond,Comic Sans; font-size:12pt; font-style:italic">
+					"Although each kid is different, I believe that the common characteristic among every child is their desire to be loved and curiosity to learn. When they get uninhibited love and attention in a healthy enviroment, their learning becomes exponential." -<strong>Murugesan.</strong>
+					</p>
+
+<p style="font-family: calibri, Garamond,Comic Sans; font-size:12pt; font-style:italic">
+					"I always wanted to share my knowledge, experience and acquired wisdom with the next generation. Teaching and reading are my passion. I want to return back to the society what I have learned and earned so far, thorough the youngest and brightest minds of India." - <strong>Shreedhran.</strong>
+					</p>
+
+	<!--div class="row">
+
+	  <div class="col-sm-6 col-md-4">
+	    <div class="thumbnail">
+	      <img src="./images/director_m.png" alt="...">
+	      <div class="caption">
+					<p>
+					"Although each kid is different, I believe that the common characteristic among every child is their desire to be loved and curiosity to learn. When they get uninhibited love and attention in a healthy enviroment, their learning becomes exponential.", <strong>Murugesan.</strong>
+					</p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="col-sm-6 col-md-4">
+	    <div class="thumbnail">
+	      <img src="./images/director_p.png" alt="...">
+	      <div class="caption">
+					<p>
+					"I always wanted to share my knowledge, experience and acquired wisdom with the next generation. Teaching and reading are my passion. I want to return back to the society what I have learned and earned so far, thorough the youngest and brightest minds of India.", <strong>Shreedhran.</strong>
+					</p>
+	      </div>
+	    </div>
+	  </div>
+
+	</div-->
+
+
+
+	</div>
+</div>
+
+<div id="directors" class="panel panel-primary">
+
+	<div class="panel-heading"><h3 class="panel-title"><strong>Coordinator & Teachers</strong></h3></div>
+	<div class="panel-body">
+	<p> <b>Ms.N.Padmavathy </b>is the center's educational coordinator and teacher. She is a post graduate in English Literature with excellent communication skills. She is very passionate and dedicated towards her work. She is a about 7 years of experience in early education. With her background she is sound in diagnosing children's issues and offer proper appropriate advice.</p>
+
+<p style="font-family: calibri, Garamond,Comic Sans; font-size:12pt; font-style:italic">
+"Being a teacher of young children is a very gratifying job, you get hugs and kisses on a daily basis, what else can you ask from life. Children are very forgiving, they don't care if you have a beautiful voice or know how to dance, all they care about is that you love and care for them. I love my job!", <strong>Padmavathy</strong>
+					</p>
+<hr>
+
+		<p><b>Ms.Bairavi </b> is a gradute with specialisation in Education and has good experience in teaching for play school and elementary school students. She is a result oriented person with soft approach toward students and is committed towards her work.</p>
+
+<p style="font-family: calibri, Garamond,Comic Sans; font-size:12pt; font-style:italic">
+					"A good teacher explains but a great teacher inspires. I would like to inspire my students!", <strong>Bairavi</strong>
+</p>
+
+
+	<!--div class="row">
+
+	  <div class="col-sm-6 col-md-4">
+	    <div class="thumbnail">
+	      <img src="./images/coordinator.jpg" alt="...">
+	      <div class="caption">
+					<p>
+					"Being a teacher of young children is a very gratifying job, you get hugs and kisses on a daily basis, what else can you ask from life. Children are very forgiving, they don't care if you have a beautiful voice or know how to dance, all they care about is that you love and care for them. I love my job!", <strong>Padma</strong>
+					</p>
+	      </div>
+	    </div>
+	  </div>
+	</div-->
+
+
+	</div>
+</div>
+
+<div id="directors" class="panel panel-primary">
+	<div class="panel-heading"><h3 class="panel-title"><strong>Day Care Expert</strong></h3></div>
+	<div class="panel-body">
+		<p><b>Ms.A Parameshwari </b> is an expert with lots of experience in teaching in various schools and has an orientation towards caring for children. She takes care of each child as her own child with lots of love and affection</p>
+<p style="font-family: calibri, Garamond,Comic Sans; font-size:12pt; font-style:italic">
+					"I love being a part of development of each child and sharing precious memories with their families.", <strong>Parameshwari</strong>
+					</p>
+	</div>
+</div>
+
+<div id="directors" class="panel panel-primary">
+	<div class="panel-heading"><h3 class="panel-title"><strong>Caretaker</strong></h3></div>
+	<div class="panel-body">
+		<p><b>Ms.Lalitha </b> is our center's care taker and house keeping expert who keeps the premises spic and span. She always performs each and assignment with a bright smile.</p>
+	</div>
+</div>
+
+
+
+
+						</div>
+				<div class="col-md-4">
+					<a href="#" class="thumbnail">
+						<img id="ima" src="./images/1.JPG">
+					</a>
+				</div>
+			</div>
+		</div>
+      </div>
+
+	</script>
+
+<script type="text/x-handlebars" data-template-name="programs">
+
+        <div class="row">
+        	<div class="col-md-12">
+				<div class="col-md-8">
+
+<div id="directors" class="panel panel-primary">
+	<div class="panel-heading"><h3 class="panel-title"><strong>Play Group (Age : 1.5 years to 2.5 years)</strong></h3></div>
+	<div class="panel-body">
+		<ul class="list-group">
+		  <li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-hand-right"></span>&nbsp;Gradually transition from home to a semiformal school environment.
+		  <li class="list-group-item list-group-item-info"><span class="glyphicon glyphicon-hand-right"></span>&nbsp;Get introduced to alphabets and numbers
+		  <li class="list-group-item list-group-item-warning"><span class="glyphicon glyphicon-hand-right"></span>&nbsp;Learn to recognize phonic sounds</li>
+		  <li class="list-group-item list-group-item-danger"><span class="glyphicon glyphicon-hand-right"></span>&nbsp;Be able to identify different shapes </li>
+		  <li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-hand-right"></span>&nbsp;Be able to allowed to master gross and fine motor skills</li>
+		</ul>
+	</div>
+</div>
+
+<div id="directors" class="panel panel-primary">
+	<div class="panel-heading"><h3 class="panel-title"><strong>Nursery (Age : 2.5 years to 3.5 years)</strong></h3></div>
+	<div class="panel-body">
+		<ul class="list-group">
+		  <li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-hand-right"></span>&nbsp;Learn how to play and work as a group</li>
+		  <li class="list-group-item list-group-item-info"><span class="glyphicon glyphicon-hand-right"></span>&nbsp;Learn the art of communication </li>
+		  <li class="list-group-item list-group-item-warning"><span class="glyphicon glyphicon-hand-right"></span>&nbsp;Start identifying all alphabets and numbers upto 50 </li>
+		  <li class="list-group-item list-group-item-danger"><span class="glyphicon glyphicon-hand-right"></span>&nbsp;Learn to recognize colors</li>
+		  <li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-hand-right"></span>&nbsp;Be able to identify common animals, birds, flowers, vegetables etc </li>
+		</ul>
+	</div>
+</div>
+
+<div id="directors" class="panel panel-primary">
+	<div class="panel-heading"><h3 class="panel-title"><strong>Junior Kindergarten (Age : 3.5 years to 4.5 years)</strong></h3></div>
+	<div class="panel-body">
+		<ul class="list-group">
+		  <li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-hand-right"></span>&nbsp;Be exposed to formal education </li>
+		  <li class="list-group-item list-group-item-info"><span class="glyphicon glyphicon-hand-right"></span>&nbsp;Be introduced to CBSE Syllabus </li>
+		  <li class="list-group-item list-group-item-warning"><span class="glyphicon glyphicon-hand-right"></span>&nbsp;Cover Jr.Kg syllabus curriculum </li>
+		</ul>
+	</div>
+</div>
+
+<div id="directors" class="panel panel-primary">
+	<div class="panel-heading"><h3 class="panel-title"><strong>Senior Kindergarten (Age : 4.5 years to 5.5 years)</strong></h3></div>
+	<div class="panel-body">
+		<ul class="list-group">
+		  <li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-hand-right"></span>&nbsp;Be well accustomed to formal education </li>
+		  <li class="list-group-item list-group-item-info"><span class="glyphicon glyphicon-hand-right"></span>&nbsp;Cover Sr.Kg syllabus curriculum </li>
+		  <li class="list-group-item list-group-item-warning"><span class="glyphicon glyphicon-hand-right"></span>&nbsp;Get ready for first grade </li>
+		</ul>
+	</div>
+
+</div>
+
+
+
+						</div>
+				<div class="col-md-4">
+					<a href="#" class="thumbnail">
+						<img id="ima" src="./images/1.JPG">
+					</a>
+				</div>
+			</div>
+		</div>
+	</script>
+
+
+	<script type="text/x-handlebars" data-template-name="curriculum">
+
+	<div class="row">
+	        	<div class="col-md-12">
+					<div class="col-md-8">
+	<div id="directors" class="panel panel-primary">
+		<div class="panel-body">
+		<ul class="list-group">
+			<li class="list-group-item list-group-item-success">
+				The Shanti Juniors Curriculum comprises of a balanced blend of the renowned <b>Montessori Method, Waldorf Approach, High Scope Approach, Bank Street Approach, and Reggio Emilia Approach</b> and not to forget Phonetics as well as Quality Circle Time from experts in the field of Preschool education. Our curriculum has been designed exclusively for an all-round development of the child, taking in to account their cognitive, physical, social, emotional and sensorial abilities. After intense research, it was found that I3 Learning Ladder inspires the 4Cs in a child.
+  <br>
+
+			</li>
+		</ul>
+		</div>
+	</div>
+
+	<div id="directors" class="panel panel-primary">
+		<div class="panel-heading"><h3 class="panel-title"><strong>I3 Learning Ladder</strong></h3></div>
+		<div class="panel-body">
+
+			<ul class="list-group">
+			  <li class="list-group-item list-group-item-success"><span class="badge">Inquiry</span> &nbsp;It describes child's thirst for knowledge and information. Children inquest and investigate everything they see in their surroundings. This highlights their basic characteristic of being 'Curious'. </li>
+			  <li class="list-group-item list-group-item-info"><span class="badge">Interaction</span> &nbsp; Continuing with the spirit of inquisitiveness, interactions are arranged for students with peers, teachers,experts, toys, tools or technology. This leads to unwinding their curiosity. Then they practically understand the interconnections and interdependence of the concepts. </li>
+			  <li class="list-group-item list-group-item-warning"><span class="badge">Innovation</span> &nbsp; It is an expression of creativity. Innovation is boundless as it is not limited to measurability and each creative expression is a new benchmark on the child's developmental continuum.</li>
+			</ul>
+
+		</div>
+	</div>
+
+	<div id="directors" class="panel panel-primary">
+		<div class="panel-heading"><h3 class="panel-title"><strong>4 Cs of Methodology</strong></h3></div>
+		<div class="panel-body">
+			<ul class="list-group">
+			<ul class="list-group">
+			  <li class="list-group-item list-group-item-success"><span class="badge">Curiosity</span> &nbsp;It is the trigger to search for information and seek knowledge to facilitate ones development. Little ones are curious to know about every aspect of various objects and things in their surrounding. A stimulating environment works wonders for children to foster development by stimulating and nurturing their curiosity to learn more.</li>
+			  <li class="list-group-item list-group-item-info"><span class="badge">Confidence</span> &nbsp; sprouts from power of knowledge and information gained out of Interaction. Confident individuals have poise and believe in their potentials to make a difference. Confidence is an attribute that provides scope for creative thinking and innovations.</li>
+			  <li class="list-group-item list-group-item-warning"><span class="badge">Creativity</span> &nbsp; is an abstract attribute that is rooted into Confidence. Confidence is half battle won towards a goal and the rest is remarkably achieved with appropriate environment and stimulation for its expressions. </li>
+			  <li class="list-group-item list-group-item-warning"><span class="badge">Continuity</span> &nbsp;  signifies perseverance & patience to satisfy curiosity, foster confidence & develop creativity. Learning and development are dynamic processes. Continuity of innovation through creativity is therefore the peak of - I3 Learning Ladder which foster 4 Cs; Curiosity, Confidence, Creativity & Continuity.</li>
+			</ul>
+			</ul>
+		</div>
+	</div>
+
+
+
+
+
+							</div>
+					<div class="col-md-4">
+						<a href="#" class="thumbnail">
+							<img id="ima" src="./images/1.JPG">
+						</a>
+					</div>
+				</div>
+			</div>
+	</script>
+
+
+	<script type="text/x-handlebars" data-template-name="gallery">
+
+	        <div class="row">
+	        	<div class="col-md-12">
+				  <div class="col-xs-6 col-md-3">
+				    <a href="#" class="thumbnail">
+				      <img src="./images/gal1.jpg" alt="...">
+				    </a>
+				  </div>
+				  <div class="col-xs-6 col-md-3">
+				    <a href="#" class="thumbnail">
+				      <img src="./images/gal2.jpg" alt="...">
+				    </a>
+				  </div>
+				  <div class="col-xs-6 col-md-3">
+				    <a href="#" class="thumbnail">
+				      <img src="./images/gal3.jpg" alt="...">
+				    </a>
+				  </div>
+				  <div class="col-xs-6 col-md-3">
+				    <a href="#" class="thumbnail">
+				      <img src="./images/gal4.jpg" alt="...">
+				    </a>
+				  </div>
+				  <div class="col-xs-6 col-md-3">
+				    <a href="#" class="thumbnail">
+				      <img src="./images/gal5.jpg" alt="...">
+				    </a>
+				  </div>
+				  <div class="col-xs-6 col-md-3">
+				    <a href="#" class="thumbnail">
+				      <img src="./images/gal6.jpg" alt="...">
+				    </a>
+				  </div>
+				  <div class="col-xs-6 col-md-3">
+				    <a href="#" class="thumbnail">
+				      <img src="./images/gal7.jpg" alt="...">
+				    </a>
+				  </div>
+				  <div class="col-xs-6 col-md-3">
+				    <a href="#" class="thumbnail">
+				      <img src="./images/gal8.jpg" alt="...">
+				    </a>
+				  </div>
+				  <div class="col-xs-6 col-md-3">
+				    <a href="#" class="thumbnail">
+				      <img src="./images/gal9.jpg" alt="...">
+				    </a>
+				  </div>
+				  <div class="col-xs-6 col-md-3">
+				    <a href="#" class="thumbnail">
+				      <img src="./images/gal10.jpg" alt="...">
+				    </a>
+				  </div>
+				  <div class="col-xs-6 col-md-3">
+				    <a href="#" class="thumbnail">
+				      <img src="./images/gal11.jpg" alt="...">
+				    </a>
+				  </div>
+				  <div class="col-xs-6 col-md-3">
+				    <a href="#" class="thumbnail">
+				      <img src="./images/gal12.jpg" alt="...">
+				    </a>
+				  </div>
+
+				</div>
+			</div>
+	</script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-1.0.0.js"></script>
+    <script src="./javascripts/ember.prod.js"></script>
+    <script src="./javascripts/bootstrap.min.js"></script>
+    <script src="./javascripts/docs.min.js"></script>
+    <script type='text/javascript' src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
+    <script src="./javascripts/app.js"></script>
+    <script src="./javascripts/jquery.ticker.min.js"></script>
+
+    <script language="JavaScript" type="text/JavaScript">
+	                var im= new Array()//set your pictures here as an array
+	                im[0] = './images/1.JPG';
+	                im[1] = './images/8.JPG';
+	                im[2] = './images/12.JPG';
+	                im[3] = './images/10.JPG';
+	                im[4] = './images/15.JPG';
+	                im[5] = './images/methodology_500.jpg';
+                        im[6] = './images/sj1.png';
+                        im[7] = './images/sj3.png';
+	                var time = 2000; // set delay in miliseconds
+	                var q=1;
+	                function slideI(){
+	                document.getElementById('ima').setAttribute('src',im[q]);
+	                q++;
+	                if(q==im.length){q=0}
+	                setTimeout('slideI()',time);
+	                }
+	                onload=function(){setTimeout('slideI()',time)}
+	</script>
+	<!-- Google Analytics -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-47032052-2', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+  </body>
+</html> 
