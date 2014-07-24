@@ -52,23 +52,34 @@
 	}
 
 
-		  #map-canvas { height: 400px }
+	#map-canvas { height: 400px }
 		  @media all and (max-width: 768px) {
 			#map-outer  { height: 650px }
 	}
+
 	.list-group-item>.badge {
 		float: left;
 	}
 
-	 .well {
-	 min-height: 10px;
-	 padding: 19px;
-	 margin-bottom: 20px;
-	 background-color: #FFF500;
-	 border: 1px solid #DF2323;
-	 border-radius: 4px;
-	 -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
-	 box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+	.well {
+		 min-height: 10px;
+		 padding: 5px;
+		 margin-bottom: 20px;
+		 background-color: #FFF500;
+		 border: 1px solid #DF2323;
+		 border-radius: 4px;
+		 -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+		 box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+	}
+
+	.ticker {
+ 	 width: 600px;
+ 	 margin: 10px auto;
+	}
+
+	.ticker div {
+	  display: inline-block;
+	  word-wrap: break-word;
 	}
 </style>
 
@@ -100,19 +111,22 @@
 		<div class="row col-md-12">&nbsp;</div>
 		<div class="row col-md-12">&nbsp;</div>
 		<div class="row col-md-12">&nbsp;</div>
+
+		<!-- Latest News Section-->
 		<div class="row">
 			<div class="col-md-8">
 				{{#view App.NewsView}}
-							      <div id="ticker" class="ticker well well-sm">
-							      	<strong>Latest News:</strong>
-							      	<ul>
-									    <li>Admissions Open. Contact us now!</li>
-									    <li>We just launched a new facebook page <a href="http://www.facebook.com/shantijuniors.chennai">Visit us on facebook</a></li>
-									</ul>
-							      </div>
+					<div id="ticker" class="well well-sm ticker">
+						<strong>Latest News:</strong>
+						<ul>
+							<li>Admissions Open. Contact us now!</li>
+							<li>We just launched a new facebook page, <a href="http://www.facebook.com/shantijuniors.chennai">Visit us on facebook</a></li>
+						</ul>
+					</div>
       			{{/view}}
       		</div>
 		</div>
+
 		<div class="row">
 			{{outlet}}
 		</div>
