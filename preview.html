@@ -4,7 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta property="og:title" content="Shanti Juniors Chennai" />
+	<meta property="og:type" content='website' />
+	<meta property="og:url" content="http://sjchennai.github.io/" />
+	<meta property="og:description" content="A new welcome to Shanti Juniors. We at Shanti Juniors (SJ) believe in celebrating childhood with the same intensity and love as you do for your child. A 2nd home of your child, where he/she learns the external world through our own teaching methodology."/>
+	<meta property="og:image" content="http://www.shantijuniors.com/images/logo.png"/>
+	<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+	<link rel='icon' href='./images/favicon.ico' type='image/x-icon' />
+
+
     <title>Welcome to Shanti Juniors - Chennai</title>
     <!-- Bootstrap core CSS -->
     <link href="./stylesheets/bootstrap.min.css" rel="stylesheet">
@@ -19,8 +30,9 @@
     <![endif]-->
 
     <!-- Custom styles for this template -->
+    <link href="./stylesheets/carousel.css" rel="stylesheet">
 
-<!--style>
+<style>
    .navbar a.navbar-brand {padding: 9px 15px 8px; }
    .navbar-inverse {
       background-color: white;
@@ -69,51 +81,30 @@
 	  display: inline-block;
 	  word-wrap: break-word;
 	}
-</style-->
+</style>
 
     <!-- Custom styles for this template -->
-    <!--link href="stylesheets/app.css" rel="stylesheet"-->
+    <link href="stylesheets/app.css" rel="stylesheet">
 
 </head>
 <!-- NAVBAR
 ================================================== -->
   <body>
-
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="http://www.google.com">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
-
 	<script type="text/x-handlebars">
     <div class="container-fluid">
 
 		<div class="header">
-			<ul class="nav navbar-nav pull-left">
-			  <li class="active"><a href="http://www.google.com">Home</a>	</li>
+			<ul class="nav nav-pills pull-left">
+			  <li><img  class="img-responsive" src="./images/logo.png"></li>
+			  <li class="active">{{#linkTo 'index'}}Home{{/linkTo}}</li>
 			  <li>{{#linkTo 'aboutus'}}About Us{{/linkTo}}</li>
 			  <li>{{#linkTo 'team'}}Team{{/linkTo}}</li>
 			  <li>{{#linkTo 'programs'}}Programs{{/linkTo}}</li>
 			  <li>{{#linkTo 'curriculum'}}Curriculum{{/linkTo}}</li>
 			  <li>{{#linkTo 'gallery'}}Gallery{{/linkTo}}</li>
 			  <li>{{#linkTo 'contactus'}}Contact Us{{/linkTo}}</li>
-			  <li><a data-toggle="pill" target="_blank" href="http://www.facebook.com/shantijuniors.chennai"><img src="./images/facebook.png"></a></li>
-			  <li><a data-toggle="pill" target="_blank" href="https://www.google.com/maps/place/10,+Chidambaranar+St,+Ramakrishna+Nagar,+Valasaravakkam,+Chennai,+Tamil+Nadu+600095,+India/@13.0476371,80.1833448,17z/data=!3m1!4b1!4m2!3m1!1s0x3a526133b58c8107:0x12748e091c93c51d"><img src="./images/map.png"></a></li>
+			  <li><a target="_blank" href="http://www.facebook.com/shantijuniors.chennai"><img src="./images/facebook.png"></a></li>
+			  <li><a target="_blank" href="https://www.google.com/maps/place/10,+Chidambaranar+St,+Ramakrishna+Nagar,+Valasaravakkam,+Chennai,+Tamil+Nadu+600095,+India/@13.0476371,80.1833448,17z/data=!3m1!4b1!4m2!3m1!1s0x3a526133b58c8107:0x12748e091c93c51d"><img src="./images/map.png"></a></li>
 			</ul>
 		</div>
 
@@ -172,9 +163,7 @@ Features of our Alwarthirunagar center:
 <br><br><span class="glyphicon glyphicon-hand-right"></span>&nbsp;Offer day care options at nominal prices and extended hours
 <br><br><span class="glyphicon glyphicon-hand-right"></span>&nbsp;Flexible payment plans
 </p>
-<br>																			
-<p>
-
+	<br>																			<p>
 <b>
  <!--FONT SIZE="5" FACE="courier" COLOR=red> <marquee behavior="ALTERNATE" direction="left" BGColor=yellow loop="100 ">Admissions Open. Contact us now!</marquee></font-->
 
@@ -630,10 +619,10 @@ Features of our Alwarthirunagar center:
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="./javascripts/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-1.0.0.js"></script>
     <script src="./javascripts/ember.prod.js"></script>
+    <script src="./javascripts/bootstrap.min.js"></script>
     <script type='text/javascript' src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
     <script src="./javascripts/app.js"></script>
     <script src="./javascripts/jquery.ticker.min.js"></script>
