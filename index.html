@@ -59,6 +59,17 @@
 	.list-group-item>.badge {
 		float: left;
 	}
+
+	 .well {
+	 min-height: 10px;
+	 padding: 19px;
+	 margin-bottom: 20px;
+	 background-color: #FFF500;
+	 border: 1px solid #DF2323;
+	 border-radius: 4px;
+	 -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+	 box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+	}
 </style>
 
     <!-- Custom styles for this template -->
@@ -87,7 +98,21 @@
 		</div>
 
 		<div class="row col-md-12">&nbsp;</div>
-
+		<div class="row col-md-12">&nbsp;</div>
+		<div class="row col-md-12">&nbsp;</div>
+		<div class="row">
+			<div class="col-md-8">
+				{{#view App.NewsView}}
+							      <div id="ticker" class="ticker well well-sm">
+							      	<strong>Latest News:</strong>
+							      	<ul>
+									    <li>Admissions Open. Contact us now!</li>
+									    <li>We just launched a new facebook page <a href="http://www.facebook.com/shantijuniors.chennai">Visit us on facebook</a></li>
+									</ul>
+							      </div>
+      			{{/view}}
+      		</div>
+		</div>
 		<div class="row">
 			{{outlet}}
 		</div>
@@ -126,7 +151,7 @@ Features of our Alwarthirunagar center:
 </p>
 	<br>																			<p>
 <b>
- <FONT SIZE="5" FACE="courier" COLOR=red> <marquee behavior="ALTERNATE" direction="left" BGColor=yellow loop="100 ">Admissions Open. Contact us now!</marquee></font>
+ <!--FONT SIZE="5" FACE="courier" COLOR=red> <marquee behavior="ALTERNATE" direction="left" BGColor=yellow loop="100 ">Admissions Open. Contact us now!</marquee></font-->
 
 
 </b>
@@ -442,7 +467,7 @@ Features of our Alwarthirunagar center:
 			<li class="list-group-item list-group-item-success">
 				The Shanti Juniors Curriculum comprises of a balanced blend of the renowned <b>Montessori Method, Waldorf Approach, High Scope Approach, Bank Street Approach, and Reggio Emilia Approach</b> and not to forget Phonetics as well as Quality Circle Time from experts in the field of Preschool education. Our curriculum has been designed exclusively for an all-round development of the child, taking in to account their cognitive, physical, social, emotional and sensorial abilities. After intense research, it was found that I3 Learning Ladder inspires the 4Cs in a child.
   <br>
-				
+
 			</li>
 		</ul>
 		</div>
@@ -568,6 +593,8 @@ Features of our Alwarthirunagar center:
     <script src="./javascripts/docs.min.js"></script>
     <script type='text/javascript' src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
     <script src="./javascripts/app.js"></script>
+    <script src="./javascripts/jquery.ticker.min.js"></script>
+
     <script language="JavaScript" type="text/JavaScript">
 	                var im= new Array()//set your pictures here as an array
 	                im[0] = './images/1.JPG';
@@ -601,4 +628,4 @@ Features of our Alwarthirunagar center:
 	</script>
 
   </body>
-</html> 
+</html>

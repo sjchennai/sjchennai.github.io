@@ -20,6 +20,15 @@ App.Router.map(function() {
 
 });
 
+
+App.NewsView = Ember.View.extend({
+
+	  didInsertElement: function() {
+		  $('.ticker').ticker();
+	}
+});
+
+
 App.MapView = Ember.ContainerView.extend({
   id: 'map-canvas',
   tagName: 'div',
