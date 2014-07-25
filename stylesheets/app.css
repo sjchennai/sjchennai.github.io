@@ -58,7 +58,7 @@ body {
      margin: 0;
      background: url('../images/body_img.png');
      font: 14px/19px "Verdana", Helvetica, Arial, sans-serif;
-     background-repeat:no-repeat;
+     background-repeat:repeat;
      background-color:#F6FCFF;
 }
 

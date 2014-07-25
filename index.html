@@ -29,8 +29,6 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- Custom styles for this template -->
-    <link href="./stylesheets/carousel.css" rel="stylesheet">
 
 <style>
    .navbar a.navbar-brand {padding: 9px 15px 8px; }
@@ -72,14 +70,9 @@
 		 box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
 	}
 
-	.ticker {
- 	 width: 600px;
- 	 margin: 10px auto;
-	}
 
 	.ticker div {
 	  display: inline-block;
-	  word-wrap: break-word;
 	}
 </style>
 
@@ -92,6 +85,7 @@
   <body>
 	<script type="text/x-handlebars">
     <div class="container-fluid">
+
 		<div class="header">
 			<ul class="nav nav-pills pull-left">
 			  <li><img  class="img-responsive" src="./images/logo.png"></li>
@@ -106,35 +100,38 @@
 			  <li><a target="_blank" href="https://www.google.com/maps/place/10,+Chidambaranar+St,+Ramakrishna+Nagar,+Valasaravakkam,+Chennai,+Tamil+Nadu+600095,+India/@13.0476371,80.1833448,17z/data=!3m1!4b1!4m2!3m1!1s0x3a526133b58c8107:0x12748e091c93c51d"><img src="./images/map.png"></a></li>
 			</ul>
 		</div>
-	</div>
+	</div>	
 
-	<div class="container-fluid">
+
+<div class="container-fluid">
 		<div class="row col-md-12">&nbsp;</div>
 		<div class="row col-md-12">&nbsp;</div>
 		<div class="row col-md-12">&nbsp;</div>
 
 		<!-- Latest News Section-->
 		<div class="row">
-			<div class="col-md-8">
-				{{#view App.NewsView}}
-					<div id="ticker" class="well well-sm ticker">
-						<strong>Latest News:</strong>
-						<ul>
-							<li>Admissions Open. Contact us now!</li>
-							<li>We just launched a new facebook page, <a href="http://www.facebook.com/shantijuniors.chennai">Visit us on facebook</a></li>
-						</ul>
-					</div>
-      			{{/view}}
+			<div class="col-md-12">
+				<div id="address" class="col-md-8">
+					{{#view App.NewsView}}
+						<div id="ticker" class="ticker well well-sm">
+							<span class="glyphicon glyphicon-globe"></span>&nbsp;<strong>Latest News:</strong>
+							<ul>
+								<li>Admissions Open. Contact us now!</li>
+								<li>We just launched a new facebook page, <a href="http://www.facebook.com/shantijuniors.chennai">Visit us on facebook</a></li>
+							</ul>
+						</div>
+	      			{{/view}}
+	      		</div>	
       		</div>
 		</div>
 
 		<div class="row">
 			{{outlet}}
 		</div>
-
+		<div class="row col-md-12">&nbsp;</div>
 		<div class="row col-md-12">
 
-				  <p>&nbsp;&copy; 2014 Shanti Juniors - Alwarthiru Nagar,Chennai &middot; <a href="mailto:alwarthirunagar@shantijuniors.com">alwarthirunagar@shantijuniors.com</a> , +91-9445006651 , +91-9444187515</p>
+				  <p>&nbsp;&copy; 2014 Shanti Juniors - Alwarthiru Nagar,Chennai &middot; <span class="glyphicon glyphicon-envelope"></span>&nbsp; <a href="mailto:alwarthirunagar@shantijuniors.com">alwarthirunagar@shantijuniors.com</a> , <span class="glyphicon glyphicon-phone-alt"></span>&nbsp;+91-9445006651 , +91-9444187515</p>
 		</div> <!-- End of footer row-->
 
     </div> <!-- /container -->
@@ -213,8 +210,8 @@ Features of our Alwarthirunagar center:
 																							Alwarthirunagar<br>
 																							Chennai<br>
 																							India 600087<br>
-																							<abbr>P:</abbr> +91-9445006651 , +91-9444187515<br>
-																							<abbr>Email:</abbr> <a href="mailto:alwarthirunagar@shantijuniors.com">alwarthirunagar@shantijuniors.com</a>
+																							<span class="glyphicon glyphicon-phone-alt"></span>&nbsp; +91-9445006651 , +91-9444187515<br>
+																							<span class="glyphicon glyphicon-envelope"></span>&nbsp; <a href="mailto:alwarthirunagar@shantijuniors.com">alwarthirunagar@shantijuniors.com</a>
 																						</p>
 						</address>
 										</li>
@@ -554,62 +551,62 @@ Features of our Alwarthirunagar center:
 	        <div class="row">
 	        	<div class="col-md-12">
 				  <div class="col-xs-6 col-md-3">
-				    <a href="#" class="thumbnail">
+				    <a class="thumbnail">
 				      <img src="./images/gal1.jpg" alt="...">
 				    </a>
 				  </div>
 				  <div class="col-xs-6 col-md-3">
-				    <a href="#" class="thumbnail">
+				    <a class="thumbnail">
 				      <img src="./images/gal2.jpg" alt="...">
 				    </a>
 				  </div>
 				  <div class="col-xs-6 col-md-3">
-				    <a href="#" class="thumbnail">
+				    <a class="thumbnail">
 				      <img src="./images/gal3.jpg" alt="...">
 				    </a>
 				  </div>
 				  <div class="col-xs-6 col-md-3">
-				    <a href="#" class="thumbnail">
+				    <a class="thumbnail">
 				      <img src="./images/gal4.jpg" alt="...">
 				    </a>
 				  </div>
 				  <div class="col-xs-6 col-md-3">
-				    <a href="#" class="thumbnail">
+				    <a class="thumbnail">
 				      <img src="./images/gal5.jpg" alt="...">
 				    </a>
 				  </div>
 				  <div class="col-xs-6 col-md-3">
-				    <a href="#" class="thumbnail">
+				    <a class="thumbnail">
 				      <img src="./images/gal6.jpg" alt="...">
 				    </a>
 				  </div>
 				  <div class="col-xs-6 col-md-3">
-				    <a href="#" class="thumbnail">
+				    <a class="thumbnail">
 				      <img src="./images/gal7.jpg" alt="...">
 				    </a>
 				  </div>
 				  <div class="col-xs-6 col-md-3">
-				    <a href="#" class="thumbnail">
+				    <a class="thumbnail">
 				      <img src="./images/gal8.jpg" alt="...">
 				    </a>
 				  </div>
 				  <div class="col-xs-6 col-md-3">
-				    <a href="#" class="thumbnail">
+				    <a class="thumbnail">
 				      <img src="./images/gal9.jpg" alt="...">
 				    </a>
 				  </div>
 				  <div class="col-xs-6 col-md-3">
-				    <a href="#" class="thumbnail">
+				    <a class="thumbnail">
 				      <img src="./images/gal10.jpg" alt="...">
 				    </a>
 				  </div>
 				  <div class="col-xs-6 col-md-3">
-				    <a href="#" class="thumbnail">
+				    <a class="thumbnail">
 				      <img src="./images/gal11.jpg" alt="...">
 				    </a>
 				  </div>
 				  <div class="col-xs-6 col-md-3">
-				    <a href="#" class="thumbnail">
+				    <a class="thumbnail">
 				      <img src="./images/gal12.jpg" alt="...">
 				    </a>
 				  </div>
